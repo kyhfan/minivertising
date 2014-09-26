@@ -67,8 +67,8 @@
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
     <meta name="generator" content="WordPress 4.0" />
-    <link rel='canonical' href='<?=$home?>/?page_id=109' />
-    <link rel='shortlink' href='<?=$home?>/?p=109' />
+    <link rel='canonical' href='<?=$home?>/contact/' />
+    <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
     <style type="text/css" media="screen">
 		html { margin-top: 32px !important; }
@@ -82,19 +82,19 @@
   </head>
 
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=2") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
 ?>
   <body class="page page-id-2 page-template-default logged-in admin-bar no-customize-support">
 <?php
 	}
-	else if (strpos($_SERVER['REQUEST_URI'], "page_id=133") !== false)
+	else if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
 	{
 ?>
   <body class="page page-id-133 page-template-blog logged-in admin-bar no-customize-support">
 <?php
 	}
-	else if (strpos($_SERVER['REQUEST_URI'], "page_id=136") !== false)
+	else if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
 	{
 ?>
   <body class="page page-id-136 page-template-blog logged-in admin-bar no-customize-support">
@@ -131,7 +131,7 @@
         <div class="ten columns omega header-right">
           <ul id="menu-menu1" class="main-nav text-shadow">
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=2") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
 ?>
             <li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-142">
@@ -143,10 +143,10 @@
 	}
 ?>
 
-              <a href="<?=$home?>/?page_id=2">ABOUT</a>
+              <a href="<?=$home?>/about/">ABOUT</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=133") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
 	{
 ?>
             <li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item-133 current_page_item menu-item-140">
@@ -157,10 +157,10 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=133">WORK</a>
+              <a href="<?=$home?>/work/">WORK</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=136") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
 	{
 ?>
             <li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-136 current_page_item menu-item-139">
@@ -171,10 +171,10 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=136">NEWS</a>
+              <a href="<?=$home?>/news/">NEWS</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=109") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
 	{
 ?>
             <li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-109 current_page_item menu-item-141">
@@ -185,7 +185,7 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=109">CONTACT</a>
+              <a href="<?=$home?>/contact/">CONTACT</a>
             </li>
           </ul> 
         </div>
