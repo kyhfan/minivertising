@@ -2,11 +2,17 @@
     <footer>	
       <div class="sixteen columns">
         <hr class="footer border-color" />
-        <span class="footertext">
-          <small>
-            © MINIVERTISING Corp.
-          </small>
-        </span>
+        <div class="clearfix">
+              <div class="text_1">
+                MINI IS BIG.
+                MINI IS ORIGINAL.
+                MINI IS FUN.
+              </div>
+              <div class="text_copy">
+                © MINIVERTISING Corp.
+              </div>
+              
+        </div>
         <hr class="resshow border-color" />
         <span class="social"></span>
         <hr class="footer border-color" />
