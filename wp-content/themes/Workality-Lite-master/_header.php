@@ -143,7 +143,7 @@
 	}
 ?>
 
-              <a href="<?=$home?>/?page_id=2">ABOUT</a>
+              <a href="<?=$home?>/about/">ABOUT</a>
             </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "page_id=133") !== false)
@@ -157,7 +157,7 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=133">WORK</a>
+              <a href="<?=$home?>/work">WORK</a>
             </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "page_id=136") !== false)
@@ -171,7 +171,7 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=136">NEWS</a>
+              <a href="<?=$home?>/news">NEWS</a>
             </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "page_id=109") !== false)
@@ -185,7 +185,7 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/?page_id=109">CONTACT</a>
+              <a href="<?=$home?>/contact">CONTACT</a>
             </li>
           </ul> 
         </div>
