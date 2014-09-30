@@ -141,7 +141,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	h6 { font-size: 12px; line-height: 21px; margin:5px 0 0 0 }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 20px 0; line-height:1.7em; }
+	p { margin: 0 0 3px 0; line-height:1.7em; }
 	p.featured { }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px;  }
@@ -480,6 +480,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	h2.titles{
 		font-size:15px;
+		padding-top:15px;
 	}
 	.work_post_block{
 		width:100%;
