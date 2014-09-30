@@ -11,9 +11,9 @@
  *
  * @var bool
  */
-//define('WP_USE_THEMES', true);
+define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
-//require( dirname( __FILE__ ) . '/wp-blog-header.php' );
-	include_once("./wp-content/themes/Workality-Lite-master/_header.php");
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+	//include_once("./wp-content/themes/Workality-Lite-master/_header.php");
 ?>
