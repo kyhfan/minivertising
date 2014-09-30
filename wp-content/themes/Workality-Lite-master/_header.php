@@ -1,5 +1,7 @@
 <?php
+
 	$my_db = new mysqli("localhost", "root", "root", "minivertising");
+
 	if (mysqli_connect_error()) {
 		exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 	}
@@ -67,8 +69,8 @@
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
     <meta name="generator" content="WordPress 4.0" />
-    <link rel='canonical' href='<?=$home?>/?page_id=109' />
-    <link rel='shortlink' href='<?=$home?>/?p=109' />
+    <link rel='canonical' href='<?=$home?>/contact/' />
+    <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
     <style type="text/css" media="screen">
 		html { margin-top: 32px !important; }
@@ -81,40 +83,18 @@
     
   </head>
 
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=2") !== false)
-	{
-?>
-  <body class="page page-id-2 page-template-default logged-in admin-bar no-customize-support">
-<?php
-	}
-	else if (strpos($_SERVER['REQUEST_URI'], "page_id=133") !== false)
-	{
-?>
-  <body class="page page-id-133 page-template-blog logged-in admin-bar no-customize-support">
-<?php
-	}
-	else if (strpos($_SERVER['REQUEST_URI'], "page_id=136") !== false)
-	{
-?>
-  <body class="page page-id-136 page-template-blog logged-in admin-bar no-customize-support">
-<?php
-	}
-	else
-	{
-?>
-  <body class="page page-id-109 page-template-default logged-in admin-bar no-customize-support">
-<?php
-	}
-?>
+  <body class="page-template-default logged-in admin-bar no-customize-support">
 
     <div class="container">
-      <div class="sixteen columns topmargin">
+    
+      <div class="sixteen columns topmargin clearfix">
         <div class="six columns alpha">
           <a href="#" class="button navbarbutton pull-right"><i class="menu-icon"></i></a>
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
         </div>
-        <div class="ten columns omega header-right">
+        
+        
+        <div class="ten columns omega header-right" style="display:none;">
           <div class="nav-div">
             <form action="<?=$home?>">
               <input type="text" name="s" class="medium" value="">
@@ -122,14 +102,13 @@
             </form>
           </div>
         </div>
-        <br class="clear" />
-        <div class="six columns alpha">
-          <h6 class="subtext"></h6>
-        </div>
+        
+        
+     
         <div class="ten columns omega header-right">
           <ul id="menu-menu1" class="main-nav text-shadow">
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=2") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
 ?>
             <li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-142">
@@ -144,7 +123,7 @@
               <a href="<?=$home?>/about/">ABOUT</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=133") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
 	{
 ?>
             <li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item-133 current_page_item menu-item-140">
@@ -155,10 +134,10 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/work">WORK</a>
+              <a href="<?=$home?>/work/">WORK</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=136") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
 	{
 ?>
             <li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-136 current_page_item menu-item-139">
@@ -169,10 +148,10 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/news">NEWS</a>
+              <a href="<?=$home?>/news/">NEWS</a>
             </li>
 <?php
-	if (strpos($_SERVER['REQUEST_URI'], "page_id=109") !== false)
+	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
 	{
 ?>
             <li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-109 current_page_item menu-item-141">
@@ -183,7 +162,7 @@
 <?php
 	}
 ?>
-              <a href="<?=$home?>/contact">CONTACT</a>
+              <a href="<?=$home?>/contact/">CONTACT</a>
             </li>
           </ul> 
         </div>

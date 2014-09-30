@@ -1,5 +1,6 @@
 <?php
 	include_once("_header.php");
+
 ?>
     <div class="works-single hidden"></div>
     <br class="clear">
@@ -11,24 +12,19 @@
 	$res = mysqli_query($my_db, $query);
 		while($data = mysqli_fetch_array($res))
 		{
+			$thumb_flag = 0;
 			$query_options = "SELECT option_value FROM wp_options WHERE option_name='home'";
 			list($home) = mysqli_fetch_array(mysqli_query($my_db, $query_options));
 			$date_array1 = explode(" ",$data[post_date]);
 			$date_array2 = explode("-",$date_array1[0]);
 
-			$query_meta = "SELECT meta_key, meta_value FROM wp_postmeta WHERE post_id='".$data[ID]."'";
+			$query_meta = "SELECT * FROM wp_posts WHERE post_parent='".$data[ID]."' AND post_type='attachment' ORDER BY ID DESC limit 1";
 			$res_meta = mysqli_query($my_db, $query_meta);
-			
 			while($meta_data = mysqli_fetch_array($res_meta))
 			{
-				if ($meta_data[meta_key] == "_thumbnail_id")
-				{
-					$query_meta_re = "SELECT post_title FROM wp_posts WHERE ID='".$meta_data[meta_value]."'";
-					list($thumb_img) = mysqli_fetch_array(mysqli_query($my_db, $query_meta_re));
-					$thumb_flag = 1;
-				}else{
-					$thumb_flag = 2;
-				}
+				$thumb_flag = 1;
+				$query_meta_re = "SELECT meta_value FROM wp_postmeta WHERE post_id='".$meta_data[ID]."' AND meta_key='_wp_attached_file'";
+				list($thumb_img) = mysqli_fetch_array(mysqli_query($my_db, $query_meta_re));
 			}
 ?>
 
@@ -45,8 +41,9 @@
 <?php
 	if ($thumb_flag == 1)
 	{
+		$thumb_array = explode(".",$thumb_img);
 ?>
-            <img width="305" height="230" src="<?=$home?>/wp-content/uploads/<?php echo $date_array2[0]?>/<?php echo $date_array2[1]?>/<?=$thumb_img?>.png" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
+            <img width="305" height="230" src="<?=$home?>/wp-content/uploads/<?=$thumb_array[0]?>.<?=$thumb_array[1]?>" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
 <?php
 	}else{
 ?>
