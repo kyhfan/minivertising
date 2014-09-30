@@ -3,7 +3,6 @@
 
 ?>
     <div class="works-single hidden"></div>
-    <br class="clear">
 
     <div id="post-list" class="row blogpage fitvids">
       <div class="sixteen columns">
@@ -28,35 +27,38 @@
 			}
 ?>
 
-        <div class="post-<?=$data[ID]?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
-          <h3><a href="<?= $data[guid]?>" data-type="blog" data-id="<?= $data[ID]?>" data-token="2f67468a67"><?=$data[post_title]?></a></h3>
-          <div class="title border-color">
-            <strong>Category :</strong> <a href="http://minivertising.cafe24.com/?cat=1" rel="category">Uncategorized</a> 
-            · <a href="<?= $data[guid]?>#comments">No Comments</a>
-            · by <a href="http://minivertising.cafe24.com/?author=1" title="Posts by minivertising" rel="author">minivertising</a>
-            <span class="datetime"><?=substr($data[post_date],0,10)?></span>
+        <div class="post-<?=$data[ID]?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+          <div class="news_title_block clearfix">
+          	<div class="left">
+	            <div class="datetime"><?=substr($data[post_date],0,10)?></div>
+          		<div>#TAG </div>
+                <div>FB SHARE</div>
+            </div>
+            <div class="right">
+	          <h3><?=$data[post_title]?></h3>
+              <p><?=$data[post_excerpt]?></p>
+            </div>
+		  </div>	
+          <div class="news_img_block">
+              <a href="<?=$data[guid]?>" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">
+    <?php
+        if ($thumb_flag == 1)
+        {
+            $thumb_array = explode(".",$thumb_img);
+    ?>
+                <img width="305" height="230" src="<?=$home?>/wp-content/uploads/<?=$thumb_array[0]?>.<?=$thumb_array[1]?>" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
+    <?php
+        }else{
+    ?>
+                <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
+    <?php
+        }
+    ?>
+              </a>
+              
+              
           </div>
 
-          <a href="<?=$data[guid]?>" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">
-<?php
-	if ($thumb_flag == 1)
-	{
-		$thumb_array = explode(".",$thumb_img);
-?>
-            <img width="305" height="230" src="<?=$home?>/wp-content/uploads/<?=$thumb_array[0]?>.<?=$thumb_array[1]?>" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
-<?php
-	}else{
-?>
-            <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
-<?php
-	}
-?>
-          </a>
-          <p><?=$data[post_excerpt]?></p>
-          <div class="bottom">
-            <a href="<?=$data[guid]?>" class="activemenu-bg readmore" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">Read More...</a>
-            <span class="loop-tags"></span>
-          </div>
         </div>
 <?php
 		}
