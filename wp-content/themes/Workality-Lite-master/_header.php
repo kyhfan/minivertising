@@ -12,7 +12,7 @@
 
 	}
 */
-	$my_db = new mysqli("localhost", "root", "apmsetup", "minivertising");
+	$my_db = new mysqli("localhost", "root", "root", "minivertising");
 	if (mysqli_connect_error()) {
 		exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 	}
@@ -98,7 +98,7 @@
 
     <div class="container">
     
-      <div class="sixteen columns topmargin clearfix">
+      <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
           <a href="#" class="button navbarbutton pull-right"><i class="menu-icon"></i></a>
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>

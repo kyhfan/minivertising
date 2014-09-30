@@ -134,14 +134,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; color:inherit }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; letter-spacing:-0.04em; }
 	h1.biggest { font-size: 48px; line-height:44px; margin:15px 0 15px 0; font-weight:lighter; letter-spacing:-0.02em; }
-	h2 { font-size: 30px; line-height: 35px; margin:15px 0 15px 0; }
+	h2 { font-size: 20px; line-height: 35px; margin:15px 0 15px 0; }
 	h3 { font-size: 24px; line-height: 29px; }
 	h4 { font-size: 21px; line-height: 26px; }
-	h5 { font-size: 18px; line-height: 23px; }
+	h5 { font-size: 14px; line-height: 23px; }
 	h6 { font-size: 12px; line-height: 21px; margin:5px 0 0 0 }
 	.subheader { color: #777; }
 
-	p { margin: 5px 0 20px 0; line-height:1.7em; }
+	p { margin: 0 0 20px 0; line-height:1.7em; }
 	p.featured { }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px;  }
@@ -455,6 +455,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .container .offset-by-thirteen              { padding-left: 780px; }
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+	/* MINIVERTISING */
+	.header_navi{
+		margin-bottom:20px;
+	}
 
 
 
@@ -1402,6 +1408,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* #Site Styles
 ================================================== */
+
 	
 	.topmargin { 
 		margin-top:30px!important;
@@ -1500,9 +1507,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		padding:12px 0 0px 0; 
 	}
 	.featured img {
-		-moz-box-shadow: 0px 2px 5px #ccc;
-		-webkit-box-shadow: 0px 2px 5px #CCC;
-		box-shadow: 0px 2px 5px #CCC;	
+		
 	}
 	span.category { 
 	  	padding:5px 0 5px 0; 
