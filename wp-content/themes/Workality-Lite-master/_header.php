@@ -87,8 +87,8 @@
 		html { margin-top: 32px !important; }
 		* html body { margin-top: 32px !important; }
 		@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-		* html body { margin-top: 46px !important; }
+		html { margin-top: 20px !important; }
+		* html body { margin-top: 20px !important; }
 		}
     </style>
     

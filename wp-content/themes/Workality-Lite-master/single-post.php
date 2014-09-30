@@ -26,10 +26,10 @@
       <div class="work_post_block clearfix">
           <div class="left">
               <p>
-                <span>Category</span> <a href="#">category 명</a>  
+                <span>Category</span> <span><a href="#">category 명</a></span>
               </p> 
               <p>
-                <span>Client</span> Client 명
+                <span>Client</span> <span><?=$post_array[post_excerpt]?></span>
               </p>
           </div>
           <div class="right">
