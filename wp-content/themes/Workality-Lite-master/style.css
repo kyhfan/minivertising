@@ -126,7 +126,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+		font-family: 'Roboto Condensed', 'Nanum Gothic Coding', "Helvetica Neue", Arial, Helvetica, sans-serif;
 		color: #000;
 		font-weight: normal; 
 		text-shadow:0 1px 0 #fff
@@ -461,6 +461,35 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.header_navi{
 		margin-bottom:35px;
 	}
+	.news_title_block{
+		width:100%;
+	}
+	.news_title_block h3{
+		font-size:14px;
+	}
+	.news_title_block .left,
+	.news_title_block .right{
+		float:left;
+		width:50%;
+		font-size:13px;
+	}
+	.news_img_block{
+		padding-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:1px solid #ccc;
+	}
+	h2.titles{
+		font-size:15px;
+	}
+	.work_post_block{
+		width:100%;
+	}
+	.work_post_block .left,
+	.work_post_block .right{
+		width:50%;
+		float:left;
+	}
+
 
 
 
@@ -525,7 +554,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container { width: 300px; }
+        .container { width: 95%; }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -547,12 +576,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         .container .fifteen.columns,
         .container .sixteen.columns,
         .container .one-third.column,
-        .container .two-thirds.column  { width: 300px; }
+        .container .two-thirds.column  { width: 100%; }
 		
-		.container .fifteensp.columns { width: 280px; margin:0 10px 0 10px; }
+		.container .fifteensp.columns { width: 95%; margin:0 10px 0 10px; }
 		.container .fifteensp.columns .four.columns, 
 		.container .fifteensp.columns .twelve.columns, 
-		.container .fifteensp.columns .three.columns { width: 280px; }
+		.container .fifteensp.columns .three.columns { width: 95%;}
 	
 	
         /* Offsets */
@@ -1903,6 +1932,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
    
 	.postcontent { 
 		display:block;
+		font-size:13px;
 	}
 	.postcontent div.contentimages, .postcontent div.contentvideos {   
 		padding-top:30px;
