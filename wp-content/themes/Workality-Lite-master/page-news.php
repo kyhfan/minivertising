@@ -3,7 +3,6 @@
 
 ?>
     <div class="works-single hidden"></div>
-    <br class="clear">
 
     <div id="post-list" class="row blogpage fitvids">
       <div class="sixteen columns">
@@ -30,12 +29,7 @@
 
         <div class="post-<?=$data[ID]?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
           <h3><a href="<?= $data[guid]?>" data-type="blog" data-id="<?= $data[ID]?>" data-token="2f67468a67"><?=$data[post_title]?></a></h3>
-          <div class="title border-color">
-            <strong>Category :</strong> <a href="http://minivertising.cafe24.com/?cat=1" rel="category">Uncategorized</a> 
-            · <a href="<?= $data[guid]?>#comments">No Comments</a>
-            · by <a href="http://minivertising.cafe24.com/?author=1" title="Posts by minivertising" rel="author">minivertising</a>
-            <span class="datetime"><?=substr($data[post_date],0,10)?></span>
-          </div>
+          <div class="datetime"><?=substr($data[post_date],0,10)?></div>
 
           <a href="<?=$data[guid]?>" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">
 <?php
@@ -54,7 +48,6 @@
           </a>
           <p><?=$data[post_excerpt]?></p>
           <div class="bottom">
-            <a href="<?=$data[guid]?>" class="activemenu-bg readmore" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">Read More...</a>
             <span class="loop-tags"></span>
           </div>
         </div>

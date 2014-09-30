@@ -116,7 +116,7 @@
         
         
      
-        <div class="ten columns omega header-right">
+        <div class="ten columns omega header-right" style="padding-top:15px;">
           <ul id="menu-menu1" class="main-nav text-shadow">
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
