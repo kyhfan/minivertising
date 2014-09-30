@@ -25,7 +25,7 @@
     <div class="fifteensp columns offset-by-half alpha pinfo">
       <div class="four columns alpha">
         <strong>Category</strong> <br />
-        <a href="http://workality-lite.northeme.com/fields/graphic-design/">category 명</a>  
+        <a href="#">category 명</a>  
       </div> 
       <div class="four columns">
         <strong>Client</strong> <br />
@@ -46,7 +46,7 @@
       </div>
       <br class="clear" />
       <div class="postcontent fitvids">
-        <div class="contentimages fifteen columns offset-by-half alpha"><?=$post_array[post_content]?></div>
+        <div class="contentimages fifteen columns alpha"><?=$post_array[post_content]?></div>
         <br class="clear" />
       </div>
       <!-- <div class="fifteensp columns offset-by-half alpha" style="margin-bottom:10px;">

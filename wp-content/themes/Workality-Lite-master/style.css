@@ -1912,7 +1912,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		background-color:#fff; 
 		line-height:1.7em;
 		display:block;
-		border-top:1px solid #ccc; 
 		padding-top:10px;
 		-webkit-border-bottom-right-radius: 5px;
 		-webkit-border-bottom-left-radius: 5px;
@@ -1982,14 +1981,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	
 	
 	div.postwraps .pinfo div {
-		/*font-size:11px*/ 
+		font-size:13px 
 	}
 	div.postwraps hr {  
 		margin:10px 0 10px 0; 
 		border-color:#f0f0f0;
 	}
 	div.contentimages { 
-		text-align:center;
 		position:relative;
 	}
 	div.contentimages div.caption { 
@@ -2149,6 +2147,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	footer .clearfix{
 		width:100%;
 		font-size:12px;
+		padding-bottom:30px;
 	}
 	footer .text_1{
 		float:left;
