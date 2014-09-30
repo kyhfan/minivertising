@@ -9,5 +9,5 @@
     		</div>
     	</div>
 <?php
-	//include_once("_footer.php");
+	include_once("_footer.php");
 ?>
