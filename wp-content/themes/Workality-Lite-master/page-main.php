@@ -5,9 +5,9 @@
     	<br class="clear" />
         <div class="row fitvids">
         	<div class="sixteen columns">
-			about11
+			MAINPAGE
     		</div>
     	</div>
 <?php
-	include_once("_footer.php");
+	//include_once("_footer.php");
 ?>

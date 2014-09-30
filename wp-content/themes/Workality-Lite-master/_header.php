@@ -1,4 +1,17 @@
 <?php
+/*
+	if ( !isset($wp_did_header) ) {
+
+		$wp_did_header = true;
+
+		require_once( dirname(__FILE__) . '/wp-load.php' );
+
+		wp();
+
+		require_once( ABSPATH . WPINC . '/template-loader.php' );
+
+	}
+*/
 	$my_db = new mysqli("localhost", "root", "apmsetup", "minivertising");
 	if (mysqli_connect_error()) {
 		exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
@@ -81,32 +94,7 @@
     
   </head>
 
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
-	{
-?>
-  <body class="page page-id-2 page-template-default logged-in admin-bar no-customize-support">
-<?php
-	}
-	else if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
-	{
-?>
-  <body class="page page-id-133 page-template-blog logged-in admin-bar no-customize-support">
-<?php
-	}
-	else if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
-	{
-?>
-  <body class="page page-id-136 page-template-blog logged-in admin-bar no-customize-support">
-<?php
-	}
-	else
-	{
-?>
-  <body class="page page-id-109 page-template-default logged-in admin-bar no-customize-support">
-<?php
-	}
-?>
+  <body class="page-template-default logged-in admin-bar no-customize-support">
 
     <div class="container">
     
@@ -189,10 +177,8 @@
             </li>
           </ul> 
         </div>
-        
-        
-        
+        <br class="clear" />
+        <hr class="headerbottom border-color" />
       </div>
-	  <hr class="headerbottom border-color" />
 
     <div class="header_contact"></div>
