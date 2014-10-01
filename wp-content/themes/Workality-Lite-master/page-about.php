@@ -5,7 +5,7 @@
     	<br class="clear" />
         <div class="row fitvids">
         	<div class="sixteen columns">
-			about11
+				<img src="http://localhost:8888/minivertising/wp-content/themes/Workality-Lite-master/images/ex_about.jpg" />
     		</div>
     	</div>
 <?php
