@@ -30,15 +30,6 @@
         <div class="post-<?=$data[ID]?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
           <div class="news_title_block clearfix">
           	<div class="left">
-	            <div class="datetime"><?=substr($data[post_date],0,10)?></div>
-          		<div>#TAG </div>
-                <div>FB SHARE</div>
-            </div>
-            <div class="right">
-	          <h3><?=$data[post_title]?></h3>
-              <p><?=$data[post_excerpt]?></p>
-            </div>
-		  </div>	
           <div class="news_img_block">
               <a href="<?=$data[guid]?>" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">
     <?php
@@ -55,9 +46,16 @@
         }
     ?>
               </a>
-              
-              
           </div>
+            </div>
+            <div class="right">	          
+              <h3><?=$data[post_title]?></h3>
+              <p><?=$data[post_excerpt]?></p>
+	          <div class="datetime"><?=substr($data[post_date],0,10)?></div>
+              <div>FB SHARE</div>
+            </div>
+		  </div>	
+
 
         </div>
 <?php

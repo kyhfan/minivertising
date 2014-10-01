@@ -13,7 +13,6 @@
               </div>
               
         </div>
-        <hr class="resshow border-color" />
       </div>
 
     </footer>
