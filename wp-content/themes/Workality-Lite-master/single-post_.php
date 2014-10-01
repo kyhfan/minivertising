@@ -1,6 +1,10 @@
 <?php
 	include_once("_header.php");
 
+
+$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+print_r($categories_list);
+
 	$post = $wp_query->post;
 
 	// Object형을 Array형으로 변환
