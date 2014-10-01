@@ -497,6 +497,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		width:50%;
 		float:left;
 	}
+	.contact_info div.left p.kr{
+		font-size:14px;
+	}
+	.contact_info div.right{
+		padding-top:30px;
+	}
 
 
 

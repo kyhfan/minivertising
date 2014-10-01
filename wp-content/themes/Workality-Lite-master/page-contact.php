@@ -13,13 +13,12 @@
           <div style="padding-bottom:50px;" class="contact_info clearfix">
           	<div class="left">
 	            <p style="font-weight:bold;">MINIVERTISING Corp.</p>
-                <p>2F 931-9, Bangbae-dong </p>
-    	        <p>Seocho-gu Seoul</p>
+                <p>OFFICE.&nbsp;&nbsp;2F 931-9, Bangbae-dong, Seocho-gu Seoul</p>
+    	        <p class="kr">서울시 서초구 방배동 931-9, 2층</p>
             </div>
             <div class="right">
-				<p>TEL. 02 532 2475, FAX. 02 532 2493</p>
-				<p>sh.yang@minivertising.kr</p>
-                <p>ky.yang@minivertising.kr</p>
+				<p>TEL. 02 532 2475, &nbsp;&nbsp;FAX. 02 532 2493</p>
+                <p>FB.&nbsp;&nbsp;<a href="https://www.facebook.com/minivertising/" target="_blank">www.facebook.com/minivertising</a></p>
             </div>
           </div>
           <div id="gmap_div" style="height:500px;position:relative;">
