@@ -2,7 +2,7 @@
 	include_once("_header.php");
 
 
-$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+	$categories_list = get_the_category_list( __( ', ', 'Workality-Lite-master' ) );
 
 	$post = $wp_query->post;
 
@@ -18,6 +18,8 @@ $categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
 	}
 	$post_array = transObject($post);
 	//print_r($post_array);
+	
+	$client_array = get_post_meta( $post_array[ID], "client");
 ?>
 <div id="singlecontent">
   <div class="postwraps sixteen columns showajaxcontent border-color">
@@ -28,11 +30,11 @@ $categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
     <div class="fifteensp columns offset-by-half alpha pinfo">
       <div class="four columns alpha">
         <strong>Category</strong> <br />
-        <a href="http://workality-lite.northeme.com/fields/graphic-design/">category 명</a>  
+        <a href="http://workality-lite.northeme.com/fields/graphic-design/"><?=$categories_list?></a>  
       </div> 
       <div class="four columns">
         <strong>Client</strong> <br />
-        Client 명
+        <?=$client_array[0]?>
       </div>
       <br class="clear" />
       <hr />

@@ -31,7 +31,7 @@ $(window).resize(function(){
   
   if (b_width >= 960)
     var b_left = - (b_width - 940) / 2;
-  else if (b_width >= 960)
+  else if (b_width >= 768)
     var b_left = - (b_width - 748) / 2;
   else if (b_width >= 420)
     var b_left = - (b_width - 420) / 2;
