@@ -30,7 +30,16 @@
 $(window).resize(function(){
   var b_width = document.body.clientWidth;
   var b_height = document.body.clientHeight;
-  var b_left = - (b_width - 940) / 2;
+  
+  if (b_width >= 960)
+    var b_left = - (b_width - 940) / 2;
+  else if (b_width >= 768)
+    var b_left = - (b_width - 748) / 2;
+  else if (b_width >= 420)
+    var b_left = - (b_width - 420) / 2;
+  else
+    var b_left = - (b_width - 300) / 2;
+
   $("#gmap_div").css("width",b_width); 
   $("#gmap_div").css("left",b_left); 
   $("#gmap_iframe").css("width",b_width);
