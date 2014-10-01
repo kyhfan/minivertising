@@ -35,6 +35,10 @@
         <strong>Client</strong> <br />
         <?=$client_array[0]?>
       </div>
+      <div class="four columns">
+        <strong>Tags</strong> <br />
+        <?=the_tags('', ' ', '');?>
+      </div>
       <br class="clear" />
       <hr />
     </div>

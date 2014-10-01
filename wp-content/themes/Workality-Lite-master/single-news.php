@@ -1,9 +1,10 @@
 <?php
 	include_once("_header.php");
 
-
+	// 카테고리 명
 	$categories_list = get_the_category_list( __( ', ', 'Workality-Lite-master' ) );
 
+	// 포스트 내용
 	$post = $wp_query->post;
 
 	// Object형을 Array형으로 변환
@@ -19,7 +20,9 @@
 	$post_array = transObject($post);
 	//print_r($post_array);
 	
+	// 클라이언트 명
 	$client_array = get_post_meta( $post_array[ID], "client");
+
 ?>
 <div id="singlecontent">
   <div class="postwraps sixteen columns showajaxcontent border-color">
@@ -35,6 +38,10 @@
       <div class="four columns">
         <strong>Client</strong> <br />
         <?=$client_array[0]?>
+      </div>
+      <div class="four columns">
+        <strong>Tags</strong> <br />
+        <?=the_tags('', ' ', '');?>
       </div>
       <br class="clear" />
       <hr />
