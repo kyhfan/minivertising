@@ -6,7 +6,6 @@
 
 ?>
     <div class="works-single hidden"></div>
-    <br class="clear">
 
     <div id="post-list" class="row blogpage fitvids">
       <div class="sixteen columns">
@@ -21,6 +20,15 @@
             · <a href="<?= the_guid()?>#comments"><?=comments_number( 'no comments', 'one comments', '% comments' );?></a>
             · by <a href="http://minivertising.cafe24.com/?author=1" title="Posts by minivertising" rel="author"><?=the_author()?></a>
           </div>
+            </div>
+            <div class="right">	          
+              <h3><?=$data[post_title]?></h3>
+              <p><?=$data[post_excerpt]?></p>
+	          <div class="datetime"><?=substr($data[post_date],0,10)?></div>
+              <div>FB SHARE</div>
+            </div>
+		  </div>	
+
 
           <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php

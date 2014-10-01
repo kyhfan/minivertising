@@ -10,18 +10,20 @@
     <iframe id="gmap_iframe" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12663.916420177322!2d126.9908032!3d37.484819449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1aec441647d%3A0x11a67fdb6ad9321f!2z7ISc7Jq47Yq567OE7IucIOyEnOy0iOq1rCDrsKnrsLDrj5kgOTMxLTk!5e0!3m2!1sko!2skr!4v1411555243887" height="300" frameborder="0"></iframe>
   </div>
             <?php endwhile; ?> -->
-          <div id="gmap_div" style="height:300px;position:relative;">
-            <iframe src="https://a.tiles.mapbox.com/v4/minivertising.jkhj9560/attribution,zoompan.html?access_token=pk.eyJ1IjoibWluaXZlcnRpc2luZyIsImEiOiJCNXFCN25FIn0.dDiascoSjcN1uN3v77RlNw#17/37.48462/126.99073" id="gmap_iframe" height="300"></iframe>
+          <div style="padding-bottom:50px;" class="contact_info clearfix">
+          	<div class="left">
+	            <p style="font-weight:bold;">MINIVERTISING Corp.</p>
+                <p>OFFICE.&nbsp;&nbsp;2F 931-9, Bangbae-dong, Seocho-gu Seoul</p>
+    	        <p class="kr">서울시 서초구 방배동 931-9, 2층</p>
+            </div>
+            <div class="right">
+				<p>TEL. 02 532 2475, &nbsp;&nbsp;FAX. 02 532 2493</p>
+                <p>FB.&nbsp;&nbsp;<a href="https://www.facebook.com/minivertising/" target="_blank">www.facebook.com/minivertising</a></p>
+            </div>
           </div>
-          <div id="msg_div">
-            2F 931-9
-            Bangbae-dong Seocho-gu
-            Seoul
-			T. 02. 532. 2475
-			F. 02. 532. 2493
-			sh.yang@minivertising.kr
-			ky.yang@minivertising.kr
-          </div>
+          <div id="gmap_div" style="height:500px;position:relative;">
+            <iframe src="https://a.tiles.mapbox.com/v4/minivertising.jkhj9560/attribution,zoompan.html?access_token=pk.eyJ1IjoibWluaXZlcnRpc2luZyIsImEiOiJCNXFCN25FIn0.dDiascoSjcN1uN3v77RlNw#17/37.48462/126.99073" id="gmap_iframe" height="500"></iframe>
+          </div>          
         </div>
       </div>
 <script type="text/javascript">

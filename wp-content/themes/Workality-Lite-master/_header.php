@@ -87,8 +87,6 @@
 		html { margin-top: 32px !important; }
 		* html body { margin-top: 32px !important; }
 		@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-		* html body { margin-top: 46px !important; }
 		}
     </style>
     
@@ -98,7 +96,7 @@
 
     <div class="container">
     
-      <div class="sixteen columns topmargin clearfix">
+      <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
           <a href="#" class="button navbarbutton pull-right"><i class="menu-icon"></i></a>
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
@@ -116,7 +114,7 @@
         
         
      
-        <div class="ten columns omega header-right">
+        <div class="ten columns omega header-right" style="padding-top:15px;">
           <ul id="menu-menu1" class="main-nav text-shadow">
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
