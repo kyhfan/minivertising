@@ -1,7 +1,5 @@
 <?php
 	include_once("_header.php");
-	
-	query_posts('cat=8');
 ?>
     <div id="post-list" class="row" style="margin-top:0px">
 
