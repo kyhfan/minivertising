@@ -1529,7 +1529,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	div.project-item div.thumb_large { 
 		color:#666; 
-		margin-bottom:30px;
+		margin-bottom:40px;
 		display:inline-block;
 	}
 	div.project-item div.thumb_large p { 
@@ -1586,7 +1586,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 	ul.main-nav { 
 		float:right; 
-		font-size:13px;
+		font-size:14px;
 		font-weight:700;
 		padding:0px; 
 		margin:5px 0 0 0;
@@ -2179,17 +2179,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	/* FOOTER STYLES */
 	
 	footer { 
-		margin-top:20px;
+		margin-top:0;
 	}
 	footer .clearfix{
 		width:100%;
-		font-size:12px;
+		font-size:13px;
 		padding-bottom:30px;
 	}
 	footer .text_1{
 		float:left;
 		width:50%;
-		font-size:13px;
+		font-size:14px;
 		line-height:15px;
 	}
 	footer .text_copy{

@@ -12,12 +12,12 @@
             <?php endwhile; ?> -->
           <div style="padding-bottom:50px;" class="contact_info clearfix">
           	<div class="left">
-	            <p>MINIVERTISING Corp.</p>
+	            <p style="font-weight:bold;">MINIVERTISING Corp.</p>
                 <p>2F 931-9, Bangbae-dong </p>
     	        <p>Seocho-gu Seoul</p>
             </div>
             <div class="right">
-				<p>TEL. 02_532_2475, FAX. 02_532_2493</p>
+				<p>TEL. 02 532 2475, FAX. 02 532 2493</p>
 				<p>sh.yang@minivertising.kr</p>
                 <p>ky.yang@minivertising.kr</p>
             </div>
