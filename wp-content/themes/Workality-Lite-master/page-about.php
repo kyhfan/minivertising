@@ -5,7 +5,7 @@
     	<br class="clear" />
         <div class="row fitvids">
         	<div class="sixteen columns">
-				<img src="http://localhost:8888/minivertising/wp-content/themes/Workality-Lite-master/images/ex_about.jpg" />
+				<img src="http://minivertising.cafe24.com/wp-content/themes/Workality-Lite-master/images/ex_about.jpg" />
     		</div>
             <div class="about_txt_block clearfix">
             	<div class="left">
