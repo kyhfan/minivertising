@@ -503,8 +503,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.contact_info div.right{
 		padding-top:30px;
 	}
-
-
+	.about_txt_block {
+		padding-top:20px;
+		width:100%;
+	}
+	.about_txt_block.client{
+		padding-top:40px;
+	}
+	.about_txt_block div{
+		float:left;
+		width:50%;
+	}
+	.about_txt_block div.txt{
+		font-size:14px;
+		letter-spacing:-1px;
+	}
 
 /* #Tablet (Portrait)
 ================================================== */
