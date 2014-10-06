@@ -88,7 +88,6 @@
 		@media screen and ( max-width: 782px ) {
 		}
     </style>
-    
   </head>
 
   <body class="page-template-default logged-in admin-bar no-customize-support">
@@ -102,19 +101,19 @@
         </div>
         
         
-        <div class="ten columns omega header-right" style="display:none;">
+        <!-- <div class="ten columns omega header-right" style="display:none;">
           <div class="nav-div">
             <form action="<?=$home?>">
               <input type="text" name="s" class="medium" value="">
               <button type="submit"><i class='icon-search'></i></button>
             </form>
           </div>
-        </div>
+        </div> -->
         
         
      
         <div class="ten columns omega header-right" style="padding-top:15px;">
-          <ul id="menu-menu1" class="main-nav text-shadow">
+          <ul id="menu-menu1" class="main-nav text-shadow" style="width:231px;height:30px">
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{

@@ -1,11 +1,11 @@
 <?php
 	include_once("_header.php");
 	
-	query_posts('cat=8');
 ?>
     <div id="post-list" class="row" style="margin-top:0px">
 
 <?php
+	query_posts('cat=8');
 	$query = "SELECT * FROM wp_posts WHERE post_type='post' AND post_status <> 'auto-draft' ORDER BY ID DESC";
 	$res = mysqli_query($my_db, $query);
 		while($data = mysqli_fetch_array($res))

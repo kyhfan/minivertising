@@ -1,6 +1,7 @@
 <?php
 	include_once("_header.php");
 ?>
+    <div id="post-list" class="row" style="margin-top:0px">
     <br class="clear" />
       <div class="row fitvids">
         <div class="sixteen columns">
@@ -26,6 +27,7 @@
           </div>          
         </div>
       </div>
+    </div>
 <script type="text/javascript">
 $(window).resize(function(){
   var b_width = document.body.clientWidth;

@@ -1,15 +1,13 @@
 <?php
 	include_once("_header.php");
 
-	query_posts('cat=8');
 	//the_content();
 	//the_author();
 ?>
-    <div class="works-single hidden"></div>
 
-    <div id="post-list" class="row blogpage fitvids">
-      <div class="sixteen columns">
+    <div id="post-list" class="row" style="margin-top:0px">
 <?php
+	query_posts('cat=8');
 	while (have_posts()) : the_post();
 
 	$categories = get_the_category();
@@ -45,9 +43,6 @@
 <?php
 	endwhile;
 ?>
-        <div class="navigation-bottom">
-        </div>
-      </div>
     </div>
 <?php
 	include_once("_footer.php");
