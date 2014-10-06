@@ -94,74 +94,10 @@
   <body class="page-template-default logged-in admin-bar no-customize-support">
 
     <div class="container">
-<!----------------------------------------------------------------------------------->
-
-        <div id="mobile_menu" style="display:none">
-          <ul>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
-	{
-?>
-            <li style="font-weight:bold">
-<?php
-	}else{
-?>
-            <li>
-<?php
-	}
-?>
-
-              <a href="<?=$home?>/about/">ABOUT</a>
-            </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
-	{
-?>
-            <li style="font-weight:bold">
-<?php
-	}else{
-?>
-            <li>
-<?php
-	}
-?>
-              <a href="<?=$home?>/work/">WORK</a>
-            </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
-	{
-?>
-            <li style="font-weight:bold">
-<?php
-	}else{
-?>
-            <li>
-<?php
-	}
-?>
-              <a href="<?=$home?>/news/">NEWS</a>
-            </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
-	{
-?>
-            <li style="font-weight:bold">
-<?php
-	}else{
-?>
-            <li>
-<?php
-	}
-?>
-              <a href="<?=$home?>/contact/">CONTACT</a>
-            </li>
-          </ul> 
-        </div>
-
-<!----------------------------------------------------------------------------------->
+    
       <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
-          
+          <a href="#" class="button navbarbutton pull-right"><i class="menu-icon"></i></a>
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
         </div>
         
@@ -243,15 +179,3 @@
       </div>
 
     <div class="header_contact"></div>
-<script type="text/javascript">
-$(window).resize(function(){
-  var b_width = document.body.clientWidth;
-  
-  if (b_width < 768)
-    $("#mobile_menu").show();
-  else
-	$("#mobile_menu").hide();
-
-}).resize();
-
-</script>

@@ -23,7 +23,7 @@
             </div>
           </div>
           <div id="gmap_div" style="height:500px;position:relative;">
-            <iframe src="https://a.tiles.mapbox.com/v4/minivertising.jkhj9560/attribution,zoompan.html?access_token=pk.eyJ1IjoibWluaXZlcnRpc2luZyIsImEiOiJCNXFCN25FIn0.dDiascoSjcN1uN3v77RlNw#17/37.48462/126.99073" id="gmap_iframe" height="500"></iframe>
+            <iframe src="https://a.tiles.mapbox.com/v4/minivertising.jkhj9560/attribution,zoompan.html?access_token=pk.eyJ1IjoibWluaXZlcnRpc2luZyIsImEiOiJCNXFCN25FIn0.dDiascoSjcN1uN3v77RlNw#17/37.48462/126.99073" id="gmap_iframe" height="100%"></iframe>
           </div>          
         </div>
       </div>
@@ -38,15 +38,18 @@ $(window).resize(function(){
   else if (b_width >= 768)
     var b_left = - (b_width - 748) / 2;
   else if (b_width >= 420)
-    var b_left = - (b_width - 420) / 2;
+    var b_left = - (b_width - 400) / 2;
   else
     var b_left = - (b_width - 300) / 2;
+
+  if ( b_width <= 768 )
+    var b_left = 0;
 
   $("#gmap_div").css("width",b_width); 
   $("#gmap_div").css("left",b_left); 
   $("#gmap_iframe").css("width",b_width);
-}).resize();  
-</script>  
+}).resize();
+</script>
 <?php
 	include_once("_footer.php");
 ?>
