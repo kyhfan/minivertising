@@ -3,6 +3,8 @@
 
 	//the_content();
 	//the_author();
+	// thumbnail 크기 설정
+	set_post_thumbnail_size( 220, 166 );
 ?>
 
     <div id="post-list" class="row" style="margin-top:0px">
@@ -29,7 +31,7 @@
 	if (has_post_thumbnail())
 	{
 ?>
-            <?=the_content();?>
+            <?=the_post_thumbnail();?>
 <?php
 	}else{
 ?>
