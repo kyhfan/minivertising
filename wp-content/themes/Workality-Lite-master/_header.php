@@ -75,7 +75,6 @@
     <link rel='stylesheet' id='dashicons-css'  href='<?=$home?>/wp-includes/css/dashicons.min.css?ver=4.0' type='text/css' media='all' />
     <link rel='stylesheet' id='admin-bar-css'  href='<?=$home?>/wp-includes/css/admin-bar.min.css?ver=4.0' type='text/css' media='all' />
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/modernizr.js?ver=4.0'></script>
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js?ver=4.0'></script>
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/include.js?ver=4.0'></script>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
