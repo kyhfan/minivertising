@@ -3,8 +3,6 @@
 
 	//the_content();
 	//the_author();
-	// thumbnail 크기 설정
-	set_post_thumbnail_size( 220, 166 );
 ?>
 
     <div id="post-list" class="row" style="margin-top:0px">
@@ -30,9 +28,7 @@
 <?php
 	if (has_post_thumbnail())
 	{
-?>
-            <?=the_post_thumbnail();?>
-<?php
+            the_post_thumbnail('full');
 	}else{
 ?>
             <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />

@@ -96,76 +96,73 @@
     <div class="container">
 <!----------------------------------------------------------------------------------->
 
-        <div id="mobile_menu" style="display:none">
-          <ul>
+      <div id="mobile_menu" style="display:none">
+        <ul>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
 ?>
-            <li style="font-weight:bold">
+          <li style="font-weight:bold">
 <?php
 	}else{
 ?>
-            <li>
+          <li>
 <?php
 	}
 ?>
 
-              <a href="<?=$home?>/about/">ABOUT</a>
-            </li>
+            <a href="<?=$home?>/about/">ABOUT</a>
+          </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
 	{
 ?>
-            <li style="font-weight:bold">
+          <li style="font-weight:bold">
 <?php
 	}else{
 ?>
-            <li>
+          <li>
 <?php
 	}
 ?>
-              <a href="<?=$home?>/work/">WORK</a>
-            </li>
+            <a href="<?=$home?>/work/">WORK</a>
+          </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
 	{
 ?>
-            <li style="font-weight:bold">
+          <li style="font-weight:bold">
 <?php
 	}else{
 ?>
-            <li>
+          <li>
 <?php
 	}
 ?>
-              <a href="<?=$home?>/news/">NEWS</a>
-            </li>
+            <a href="<?=$home?>/news/">NEWS</a>
+          </li>
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
 	{
 ?>
-            <li style="font-weight:bold">
+          <li style="font-weight:bold">
 <?php
 	}else{
 ?>
-            <li>
+          <li>
 <?php
 	}
 ?>
-              <a href="<?=$home?>/contact/">CONTACT</a>
-            </li>
-          </ul> 
-        </div>
+            <a href="<?=$home?>/contact/">CONTACT</a>
+          </li>
+        </ul> 
+      </div>
 
 <!----------------------------------------------------------------------------------->
       <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
-          
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
         </div>
-        
-        
         <!-- <div class="ten columns omega header-right" style="display:none;">
           <div class="nav-div">
             <form action="<?=$home?>">
@@ -174,8 +171,6 @@
             </form>
           </div>
         </div> -->
-        
-        
      
         <div class="ten columns omega header-right" style="padding-top:15px;">
           <ul id="menu-menu1" class="main-nav text-shadow" style="width:231px;height:30px">
@@ -242,7 +237,7 @@
         <hr class="headerbottom border-color" />
       </div>
 
-    <div class="header_contact"></div>
+      <div class="header_contact"></div>
 <script type="text/javascript">
 $(window).resize(function(){
   var b_width = document.body.clientWidth;
