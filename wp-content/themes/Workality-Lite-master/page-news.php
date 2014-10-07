@@ -28,7 +28,7 @@
 <?php
 	if (has_post_thumbnail())
 	{
-            the_post_thumbnail('full');
+            the_post_thumbnail('medium');
 	}else{
 ?>
             <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
