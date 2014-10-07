@@ -1,4 +1,7 @@
 <?php
+  echo ("<meta property='og:title' content='제목'/>") ;
+  echo ("<meta property='og:site_name' content='사이트명'/>") ;
+  echo ("<meta property='og:description' content='설명문'/>") ;
 	include_once("_header.php");
 
 	// 카테고리 명
@@ -22,9 +25,6 @@
 	
 	// 클라이언트 명
 	$client_array = get_post_meta( $post_array[ID], "client");
-  echo ("<meta property='og:title' content='제목'/>") ;
-  echo ("<meta property='og:site_name' content='사이트명'/>") ;
-  echo ("<meta property='og:description' content='설명문'/>") ;
 ?>
 <div id="singlecontent">
   <div class="postwraps sixteen columns showajaxcontent border-color">
