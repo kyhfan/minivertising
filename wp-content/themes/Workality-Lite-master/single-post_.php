@@ -1,6 +1,10 @@
 <?php
 	include_once("_header.php");
 
+
+$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+print_r($categories_list);
+
 	$post = $wp_query->post;
 
 	// Object형을 Array형으로 변환
@@ -17,27 +21,28 @@
 	//print_r($post_array);
 ?>
 <div id="singlecontent">
-  <div class="postwraps sixteen columns showajaxcontent border-color">
+  <div class="postwraps sixteen columns showajaxcontent">
     <div class="fifteensp columns offset-by-half alpha">
-      <h2 class="titles" style="text-shadow:none!important;"><a href="<?=$post_array[guid]?>" style="text-shadow:none!important;"><?=$post_array[post_title]?></a></h2>
+      <h2 class="titles" style="text-shadow:none!important;"><?=$post_array[post_title]?></h2>
       <hr />
     </div>  
     <div class="fifteensp columns offset-by-half alpha pinfo">
-      <div class="four columns alpha">
-        <strong>Category</strong> <br />
-        <a href="http://workality-lite.northeme.com/fields/graphic-design/">category 명</a>  
-      </div> 
-      <div class="four columns">
-        <strong>Client</strong> <br />
-        Client 명
+      <div class="work_post_block clearfix">
+          <div class="left">
+              <p>
+                <span>Category</span> <span><a href="#">category 명</a></span>
+              </p> 
+              <p>
+                <span>Client</span> <span><?=$post_array[post_excerpt]?></span>
+              </p>
+          </div>
+          <div class="right">
+          	<p><?=$post_array[post_excerpt]?></p>
+          </div>
       </div>
-      <br class="clear" />
-      <hr />
     </div>
     <br class="clear" />
     <div class="fifteensp columns offset-by-half alpha fitvids">
-      <div class="twelve columns alpha"><p><?=$post_array[post_excerpt]?></p>
-&nbsp;</div>
       <div class="three columns resdontshow omega sharing">
         <!-- <div class="sharingbottom border-color tops">
           <strong>SHARE</strong>
@@ -46,7 +51,7 @@
       </div>
       <br class="clear" />
       <div class="postcontent fitvids">
-        <div class="contentimages fifteen columns offset-by-half alpha"><?=$post_array[post_content]?></div>
+        <div class="contentimages fifteen columns alpha"><?=$post_array[post_content]?></div>
         <br class="clear" />
       </div>
       <!-- <div class="fifteensp columns offset-by-half alpha" style="margin-bottom:10px;">

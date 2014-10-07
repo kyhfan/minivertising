@@ -126,7 +126,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+		font-family: 'Roboto Condensed', 'Nanum Gothic Coding', "Helvetica Neue", Arial, Helvetica, sans-serif;
 		color: #000;
 		font-weight: normal; 
 		text-shadow:0 1px 0 #fff
@@ -134,14 +134,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; color:inherit }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; letter-spacing:-0.04em; }
 	h1.biggest { font-size: 48px; line-height:44px; margin:15px 0 15px 0; font-weight:lighter; letter-spacing:-0.02em; }
-	h2 { font-size: 30px; line-height: 35px; margin:15px 0 15px 0; }
+	h2 { font-size: 20px; line-height: 35px; margin:15px 0 15px 0; }
 	h3 { font-size: 24px; line-height: 29px; }
 	h4 { font-size: 21px; line-height: 26px; }
-	h5 { font-size: 18px; line-height: 23px; }
+	h5 { font-size: 14px; line-height: 23px; }
 	h6 { font-size: 12px; line-height: 21px; margin:5px 0 0 0 }
 	.subheader { color: #777; }
 
-	p { margin: 5px 0 20px 0; line-height:1.7em; }
+	p { margin: 0 0 3px 0; line-height:1.7em; }
 	p.featured { }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px;  }
@@ -457,6 +457,67 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .container .offset-by-fifteen               { padding-left: 900px; }
 
 
+	/* MINIVERTISING */
+	.header_navi{
+		margin-bottom:35px;
+	}
+	.news_title_block{
+		width:100%;
+		padding-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:1px solid #ccc;
+	}
+	.news_title_block h3{
+		font-size:14px;
+	}
+	.news_title_block .left,
+	.news_title_block .right{
+		float:left;
+		width:50%;
+		font-size:13px;
+	}
+	.news_img_block{
+	}
+	h2.titles{
+		font-size:15px;
+		padding-top:15px;
+	}
+	.work_post_block{
+		width:100%;
+	}
+	.work_post_block .left,
+	.work_post_block .right{
+		width:50%;
+		float:left;
+	}
+	.contact_info{
+		width:100%;
+	}
+	.contact_info div{
+		width:50%;
+		float:left;
+	}
+	.contact_info div.left p.kr{
+		font-size:14px;
+	}
+	.contact_info div.right{
+		padding-top:30px;
+	}
+	.about_txt_block {
+		padding-top:20px;
+		width:100%;
+	}
+	.about_txt_block.client{
+		padding-top:40px;
+	}
+	.about_txt_block div{
+		float:left;
+		width:50%;
+	}
+	.about_txt_block div.txt{
+		font-size:14px;
+		letter-spacing:-1px;
+	}
 
 /* #Tablet (Portrait)
 ================================================== */
@@ -519,7 +580,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container { width: 300px; }
+        .container { width: 95%; }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -541,12 +602,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         .container .fifteen.columns,
         .container .sixteen.columns,
         .container .one-third.column,
-        .container .two-thirds.column  { width: 300px; }
+        .container .two-thirds.column  { width: 100%; }
 		
-		.container .fifteensp.columns { width: 280px; margin:0 10px 0 10px; }
+		.container .fifteensp.columns { width: 95%; margin:0 10px 0 10px; }
 		.container .fifteensp.columns .four.columns, 
 		.container .fifteensp.columns .twelve.columns, 
-		.container .fifteensp.columns .three.columns { width: 280px; }
+		.container .fifteensp.columns .three.columns { width: 95%;}
 	
 	
         /* Offsets */
@@ -576,6 +637,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		h4 { font-size: 18px; line-height: 21px; }
 		h5 { font-size: 12px; line-height: 14px; }
 		
+		.news_title_block{
+		}
+		.news_title_block .left,
+		.news_title_block .right{
+			float:none;
+			width:100%;
+		}
+		.news_title_block .news_img_block img{
+			width:100%;
+		}
+		div#post-list{
+			margin-top:0 !important;
+		}
 
     }
 
@@ -586,7 +660,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /* Note: Design for a width of 480px */
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-        .container { width: 420px; }
+        .container { width: 100%; }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -1402,6 +1476,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* #Site Styles
 ================================================== */
+
 	
 	.topmargin { 
 		margin-top:30px!important;
@@ -1486,7 +1561,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	div.project-item div.thumb_large { 
 		color:#666; 
-		margin-bottom:30px;
+		margin-bottom:40px;
 		display:inline-block;
 	}
 	div.project-item div.thumb_large p { 
@@ -1500,9 +1575,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		padding:12px 0 0px 0; 
 	}
 	.featured img {
-		-moz-box-shadow: 0px 2px 5px #ccc;
-		-webkit-box-shadow: 0px 2px 5px #CCC;
-		box-shadow: 0px 2px 5px #CCC;	
+		
 	}
 	span.category { 
 	  	padding:5px 0 5px 0; 
@@ -1545,7 +1618,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 	ul.main-nav { 
 		float:right; 
-		font-size:13px;
+		font-size:14px;
 		font-weight:700;
 		padding:0px; 
 		margin:5px 0 0 0;
@@ -1898,6 +1971,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
    
 	.postcontent { 
 		display:block;
+		font-size:13px;
 	}
 	.postcontent div.contentimages, .postcontent div.contentvideos {   
 		padding-top:30px;
@@ -1907,7 +1981,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		background-color:#fff; 
 		line-height:1.7em;
 		display:block;
-		border-top:1px solid #ccc; 
 		padding-top:10px;
 		-webkit-border-bottom-right-radius: 5px;
 		-webkit-border-bottom-left-radius: 5px;
@@ -1977,14 +2050,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	
 	
 	div.postwraps .pinfo div {
-		/*font-size:11px*/ 
+		font-size:13px 
 	}
 	div.postwraps hr {  
 		margin:10px 0 10px 0; 
 		border-color:#f0f0f0;
 	}
 	div.contentimages { 
-		text-align:center;
 		position:relative;
 	}
 	div.contentimages div.caption { 
@@ -2139,16 +2211,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	/* FOOTER STYLES */
 	
 	footer { 
-		margin-top:20px;
+		margin-top:0;
 	}
 	footer .clearfix{
 		width:100%;
-		font-size:12px;
+		font-size:13px;
+		padding-bottom:30px;
 	}
 	footer .text_1{
 		float:left;
 		width:50%;
-		font-size:13px;
+		font-size:14px;
 		line-height:15px;
 	}
 	footer .text_copy{
