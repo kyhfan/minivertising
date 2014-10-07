@@ -84,8 +84,8 @@
     <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
     <style type="text/css" media="screen">
-		html { margin-top: 32px !important; }
-		* html body { margin-top: 32px !important; }
+		html { margin-top: 0px !important; }
+		* html body { margin-top: 0px !important; }
 		@media screen and ( max-width: 782px ) {
 		}
     </style>
@@ -94,71 +94,7 @@
   <body class="page-template-default logged-in admin-bar no-customize-support">
 
     <div class="container">
-<!----------------------------------------------------------------------------------->
 
-      <div id="mobile_menu" style="display:none">
-        <ul>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-
-            <a href="<?=$home?>/about/">ABOUT</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/work/">WORK</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/news/">NEWS</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/contact/">CONTACT</a>
-          </li>
-        </ul> 
-      </div>
-
-<!----------------------------------------------------------------------------------->
       <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
@@ -173,7 +109,7 @@
         </div> -->
      
         <div class="ten columns omega header-right" style="padding-top:15px;">
-          <ul id="menu-menu1" class="main-nav text-shadow" style="width:231px;height:30px">
+          <ul id="menu-menu1" class="main-nav text-shadow" style="height:30px">
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
@@ -236,6 +172,75 @@
         <br class="clear" />
         <hr class="headerbottom border-color" />
       </div>
+
+
+<!--------mobile_menu --------------------------------------------------------------------------->
+
+      <div id="mobile_menu" style="display:none" class="clearfix">
+        <ul class="clearfix">
+<?php
+	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
+	{
+?>
+          <li class="menu-item current-menu-item current_page_item">
+
+<?php
+	}else{
+?>
+          <li>
+<?php
+	}
+?>
+
+            <a href="<?=$home?>/about/">ABOUT</a>
+          </li>
+<?php
+	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
+	{
+?>
+          <li class="menu-item current-menu-item current_page_item">
+<?php
+	}else{
+?>
+          <li>
+<?php
+	}
+?>
+            <a href="<?=$home?>/work/">WORK</a>
+          </li>
+<?php
+	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
+	{
+?>
+          <li class="menu-item current-menu-item current_page_item">
+<?php
+	}else{
+?>
+          <li>
+<?php
+	}
+?>
+            <a href="<?=$home?>/news/">NEWS</a>
+          </li>
+<?php
+	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
+	{
+?>
+          <li class="menu-item current-menu-item current_page_item">
+<?php
+	}else{
+?>
+          <li>
+<?php
+	}
+?>
+            <a href="<?=$home?>/contact/">CONTACT</a>
+          </li>
+        </ul> 
+      </div>
+
+<!----------------------------------------------------------------------------------->
+
 
       <div class="header_contact"></div>
 <script type="text/javascript">
