@@ -512,11 +512,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.about_txt_block div{
 		float:left;
-		width:50%;
+		width:35%;
 	}
 	.about_txt_block div.txt{
 		font-size:14px;
 		letter-spacing:-1px;
+		width:65%;
 	}
 
 

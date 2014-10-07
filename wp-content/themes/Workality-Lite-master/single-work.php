@@ -50,7 +50,7 @@
       <hr />
     </div>
     <br class="clear" />
-    <div class="fifteensp columns offset-by-half alpha fitvids">
+    <div class="fifteensp columns alpha fitvids">
       <div class="twelve columns alpha"><p><?=$post_array[post_excerpt]?></p>
 &nbsp;</div>
       <div class="three columns resdontshow omega sharing">
@@ -61,7 +61,7 @@
       </div>
       <br class="clear" />
       <div class="postcontent fitvids">
-        <div class="contentimages fifteen columns offset-by-half alpha"><?=$post_array[post_content]?></div>
+        <div class="contentimages columns alpha"><?=$post_array[post_content]?></div>
         <br class="clear" />
       </div>
       <!-- <div class="fifteensp columns offset-by-half alpha" style="margin-bottom:10px;">
