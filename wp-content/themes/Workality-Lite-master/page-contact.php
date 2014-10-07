@@ -24,7 +24,7 @@
           </div>
           <div id="gmap_div" style="height:500px;position:relative;">
             <iframe src="https://a.tiles.mapbox.com/v4/minivertising.jkhj9560/attribution,zoompan.html?access_token=pk.eyJ1IjoibWluaXZlcnRpc2luZyIsImEiOiJCNXFCN25FIn0.dDiascoSjcN1uN3v77RlNw#17/37.48462/126.99073" id="gmap_iframe" height="100%"></iframe>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
