@@ -77,9 +77,11 @@
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/jquery-1.8.2.min.js'></script>
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/modernizr.js?ver=4.0'></script>
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/include.js?ver=4.0'></script>
+    <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/minivertising.js'></script>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
     <meta name="generator" content="WordPress 4.0" />
+    <meta property="og:title" content="Workday Sets Price Range for I.P.O." />
     <link rel='canonical' href='<?=$home?>/contact/' />
     <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
