@@ -5,10 +5,19 @@
 	include_once("_header.php");
 
 	// 카테고리 명
-	$categories_list = get_the_category_list( __( ', ', 'Workality-Lite-master' ) );
+	//$categories_list = get_the_category_list( __( ', ', 'Workality-Lite-master' ) );
 
 	// 포스트 내용
 	$post = $wp_query->post;
+
+	$categories = get_the_category();
+	if($categories){
+		foreach($categories as $category) {
+			$category_name = $category->cat_name;
+			if ($category_name)
+				break;
+		}
+	}
 
 	// Object형을 Array형으로 변환
 	function transObject($data) {
@@ -35,7 +44,7 @@
     <div class="fifteensp columns offset-by-half alpha pinfo">
       <div class="four columns alpha">
         <strong>Category</strong> <br />
-        <a href="http://workality-lite.northeme.com/fields/graphic-design/"><?=$categories_list?></a>  
+        <?=$category_name?>
       </div> 
       <div class="four columns">
         <strong>Client</strong> <br />

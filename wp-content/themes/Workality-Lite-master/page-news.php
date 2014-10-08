@@ -72,14 +72,6 @@
 
 <script>
 
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-
 	function fb_share(title,url){
 		FB.ui(
 		  {
@@ -98,9 +90,4 @@
 		);	
 	}
 
-	function fb_like(title, url){
-		//var goUrl = "http://www.facebook.com/plugins/like.php?href=" + encodeURIComponent(url) + "&layout=button_count&action=like&show_faces=true&share=true&height=80&appId=769243006468432";
-		var goUrl = "http://www.facebook.com/plugins/like.php?href=http://minivertising.cafe24.com&layout=button_count&action=like&share=true&height=80&appId=769243006468432";
-		var win = window.open(goUrl, "viewTrace", "resizable=yes, width=660, height=310,status=no,toolbar=no,location=no,scrollbars=no,menubar=no,titlebar=no");
-	}
 </script>
