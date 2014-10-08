@@ -7,6 +7,7 @@
 
     <div id="post-list" class="row" style="margin-top:0px">
 <?php
+	//query_posts('cat=8');
 	query_posts('cat=4');
 	while (have_posts()) : the_post();
 
@@ -23,9 +24,11 @@
           <div class="title border-color">
             <strong>Category :</strong> <?=$category_name?>
             · by minivertising
-            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.PNG"></a>
+            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
+			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
           </div>
-          <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
+            <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php
 	if (has_post_thumbnail())
 	{
@@ -48,10 +51,56 @@
 ?>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '804328482956604',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	function fb_share(title,url){
+		FB.ui(
+		  {
+			method: 'feed',
+			name: title,
+			link: url,
+		// picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_topgirl_mini.png',
+			caption: 'http://minivertising.cafe24.com',
+			description: title
+		  },
+		  function(response) {
+			if (response && response.post_id) {
+				alert("공유 되었습니다.");
+			}
+		  }
+		);	
+	}
+
+	function fb_like(title, url){
+		//var goUrl = "http://www.facebook.com/plugins/like.php?href=" + encodeURIComponent(url) + "&layout=button_count&action=like&show_faces=true&share=true&height=80&appId=769243006468432";
+		var goUrl = "http://www.facebook.com/plugins/like.php?href=http://minivertising.cafe24.com&layout=button_count&action=like&share=true&height=80&appId=769243006468432";
+		var win = window.open(goUrl, "viewTrace", "resizable=yes, width=660, height=310,status=no,toolbar=no,location=no,scrollbars=no,menubar=no,titlebar=no");
+	}
+</script>
