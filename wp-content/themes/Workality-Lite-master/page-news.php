@@ -1,72 +1,106 @@
 <?php
 	include_once("_header.php");
 
-?>
-    <div class="works-single hidden"></div>
-
-    <div id="post-list" class="row blogpage fitvids">
-      <div class="sixteen columns">
-<?php
-	$query = "SELECT * FROM wp_posts WHERE post_type='post' AND post_status <> 'auto-draft' ORDER BY ID DESC";
-	$res = mysqli_query($my_db, $query);
-		while($data = mysqli_fetch_array($res))
-		{
-			$thumb_flag = 0;
-			$query_options = "SELECT option_value FROM wp_options WHERE option_name='home'";
-			list($home) = mysqli_fetch_array(mysqli_query($my_db, $query_options));
-			$date_array1 = explode(" ",$data[post_date]);
-			$date_array2 = explode("-",$date_array1[0]);
-
-			$query_meta = "SELECT * FROM wp_posts WHERE post_parent='".$data[ID]."' AND post_type='attachment' ORDER BY ID DESC limit 1";
-			$res_meta = mysqli_query($my_db, $query_meta);
-			while($meta_data = mysqli_fetch_array($res_meta))
-			{
-				$thumb_flag = 1;
-				$query_meta_re = "SELECT meta_value FROM wp_postmeta WHERE post_id='".$meta_data[ID]."' AND meta_key='_wp_attached_file'";
-				list($thumb_img) = mysqli_fetch_array(mysqli_query($my_db, $query_meta_re));
-			}
+	//the_content();
+	//the_author();
 ?>
 
-        <div class="post-<?=$data[ID]?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-          <div class="news_title_block clearfix">
-          	<div class="left">
-	            <div class="datetime"><?=substr($data[post_date],0,10)?></div>
-          		<div>#TAG </div>
-                <div>FB SHARE</div>
-            </div>
-            <div class="right">
-	          <h3><?=$data[post_title]?></h3>
-              <p><?=$data[post_excerpt]?></p>
-            </div>
-		  </div>	
-          <div class="news_img_block">
-              <a href="<?=$data[guid]?>" data-type="blog" data-id="<?=$data[ID]?>" data-token="2f67468a67">
-    <?php
-        if ($thumb_flag == 1)
-        {
-            $thumb_array = explode(".",$thumb_img);
-    ?>
-                <img width="305" height="230" src="<?=$home?>/wp-content/uploads/<?=$thumb_array[0]?>.<?=$thumb_array[1]?>" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
-    <?php
-        }else{
-    ?>
-                <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=$data[post_title]?>" title="<?=$data[post_title]?>" />
-    <?php
-        }
-    ?>
-              </a>
-              
-              
-          </div>
-
-        </div>
+    <div id="post-list" class="row" style="margin-top:0px">
 <?php
+	//query_posts('cat=8');
+	query_posts('cat=4');
+	while (have_posts()) : the_post();
+
+	$categories = get_the_category();
+	if($categories){
+		foreach($categories as $category) {
+			$category_name = $category->cat_name;
 		}
+	}
 ?>
-        <div class="navigation-bottom">
+
+        <div class="post-<?=the_ID()?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
+          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
+          <div class="title border-color">
+            <strong>Category :</strong> <?=$category_name?>
+            · by minivertising
+            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.PNG"></a>
+            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
+			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
+          </div>
+            <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
+<?php
+	if (has_post_thumbnail())
+	{
+            the_post_thumbnail('medium');
+	}else{
+?>
+            <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
+<?php
+	}
+?>
+          </a>
+          <p><?=the_excerpt()?></p>
         </div>
-      </div>
+<?php
+	endwhile;
+?>
     </div>
 <?php
 	include_once("_footer.php");
 ?>
+
+<div id="fb-root"></div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '804328482956604',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	function fb_share(title,url){
+		FB.ui(
+		  {
+			method: 'feed',
+			name: title,
+			link: url,
+		// picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_topgirl_mini.png',
+			caption: 'http://minivertising.cafe24.com',
+			description: title
+		  },
+		  function(response) {
+			if (response && response.post_id) {
+				alert("공유 되었습니다.");
+			}
+		  }
+		);	
+	}
+
+	function fb_like(title, url){
+		//var goUrl = "http://www.facebook.com/plugins/like.php?href=" + encodeURIComponent(url) + "&layout=button_count&action=like&show_faces=true&share=true&height=80&appId=769243006468432";
+		var goUrl = "http://www.facebook.com/plugins/like.php?href=http://minivertising.cafe24.com&layout=button_count&action=like&share=true&height=80&appId=769243006468432";
+		var win = window.open(goUrl, "viewTrace", "resizable=yes, width=660, height=310,status=no,toolbar=no,location=no,scrollbars=no,menubar=no,titlebar=no");
+	}
+</script>

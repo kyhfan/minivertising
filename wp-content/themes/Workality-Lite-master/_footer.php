@@ -4,19 +4,17 @@
         <hr class="footer border-color" />
         <div class="clearfix">
               <div class="text_1">
-                MINI IS BIG.
-                MINI IS ORIGINAL.
-                MINI IS FUN.
+                <p>Agency for MINI BRAND, MINIVERTISING.</p>
               </div>
               <div class="text_copy">
                 © MINIVERTISING Corp.
               </div>
               
         </div>
-        <hr class="resshow border-color" />
       </div>
 
     </footer>
+    </div>
   </body>
 </html>
 

@@ -463,6 +463,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.news_title_block{
 		width:100%;
+		padding-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:1px solid #ccc;
 	}
 	.news_title_block h3{
 		font-size:14px;
@@ -474,9 +477,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		font-size:13px;
 	}
 	.news_img_block{
-		padding-bottom:30px;
-		margin-bottom:30px;
-		border-bottom:1px solid #ccc;
 	}
 	h2.titles{
 		font-size:15px;
@@ -490,8 +490,35 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		width:50%;
 		float:left;
 	}
-
-
+	.contact_info{
+		width:100%;
+	}
+	.contact_info div{
+		width:50%;
+		float:left;
+	}
+	.contact_info div.left p.kr{
+		font-size:14px;
+	}
+	.contact_info div.right{
+		padding-top:30px;
+	}
+	.about_txt_block {
+		padding-top:20px;
+		width:100%;
+	}
+	.about_txt_block.client{
+		padding-top:40px;
+	}
+	.about_txt_block div{
+		float:left;
+		width:35%;
+	}
+	.about_txt_block div.txt{
+		font-size:14px;
+		letter-spacing:-1px;
+		width:65%;
+	}
 
 
 /* #Tablet (Portrait)
@@ -612,6 +639,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		h4 { font-size: 18px; line-height: 21px; }
 		h5 { font-size: 12px; line-height: 14px; }
 		
+		.news_title_block{
+		}
+		.news_title_block .left,
+		.news_title_block .right{
+			float:none;
+			width:100%;
+		}
+		.news_title_block .news_img_block img{
+			width:100%;
+		}
+		div#post-list{
+			margin-top:0 !important;
+		}
 
     }
 
@@ -621,38 +661,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
     /* Note: Design for a width of 480px */
 
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-        .container { width: 420px; }
-        .container .columns,
-        .container .column { margin: 0; }
 
-        .container .one.column,
-        .container .one.columns,
-        .container .two.columns,
-        .container .three.columns,
-        .container .four.columns,
-        .container .five.columns,
-        .container .six.columns,
-        .container .seven.columns,
-        .container .eight.columns,
-        .container .nine.columns,
-        .container .ten.columns,
-        .container .eleven.columns,
-        .container .twelve.columns,
-        .container .thirteen.columns,
-        .container .fourteen.columns,
-        .container .fifteen.columns,
-        .container .sixteen.columns,
-        .container .one-third.column,
-        .container .two-thirds.column { width: 420px; }
-		
-		
-		.container .fifteensp.columns { width: 400px; margin:0 10px 0 10px; }
-		.container .fifteensp.columns .four.columns, 
-		.container .fifteensp.columns .twelve.columns, 
-		.container .fifteensp.columns .three.columns { width: 400px; }
-		
-    }
 
 
 /* #Clearing
@@ -1523,7 +1532,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	div.project-item div.thumb_large { 
 		color:#666; 
-		margin-bottom:30px;
+		margin-bottom:40px;
 		display:inline-block;
 	}
 	div.project-item div.thumb_large p { 
@@ -1580,7 +1589,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 	ul.main-nav { 
 		float:right; 
-		font-size:13px;
+		font-size:14px;
 		font-weight:700;
 		padding:0px; 
 		margin:5px 0 0 0;
@@ -2173,17 +2182,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	/* FOOTER STYLES */
 	
 	footer { 
-		margin-top:20px;
+		margin-top:0;
 	}
 	footer .clearfix{
 		width:100%;
-		font-size:12px;
+		font-size:13px;
 		padding-bottom:30px;
 	}
 	footer .text_1{
 		float:left;
 		width:50%;
-		font-size:13px;
+		font-size:14px;
 		line-height:15px;
 	}
 	footer .text_copy{
@@ -2484,7 +2493,45 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 	
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (min-width: 300px) and (max-width: 767px) {
+		.about_txt_block{
+		}
+		.about_txt_block div{
+			float:none;
+			width:100%;
+		}
+		#mobile_menu ul{
+			margin-left:0;
+		}
+		#mobile_menu ul li{
+			float:left;
+			list-style:none;
+			padding-right:15px;
+		}
+		#mobile_menu ul li a{
+			font-size:20px;
+		}
+		#mobile_menu ul .current_page_item a, 
+		#mobile_menu ul .current_menu_item a, 
+		#mobile_menu ul li:hover a {
+		border-bottom: 3px solid;
+		border-color: #000;
+		color: #000;
+		}
+		
+		.contact_info div{
+			float:none;
+			width:100%;
+		}
+		footer .text_1,
+		footer .text_copy{
+			float:none;
+			width:100%;
+			text-align:left;
+			font-size:14px;
+		}
+		
+	}
 
 
 
