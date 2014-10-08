@@ -7,8 +7,8 @@
 
     <div id="post-list" class="row" style="margin-top:0px">
 <?php
-	//query_posts('cat=8');
-	query_posts('cat=4');
+	query_posts('cat=8');
+	//query_posts('cat=4');
 	while (have_posts()) : the_post();
 
 	$categories = get_the_category();
@@ -24,7 +24,7 @@
           <div class="title border-color">
             <strong>Category :</strong> <?=$category_name?>
             · by minivertising
-            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.PNG"></a>
+            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
             <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
 			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
           </div>
