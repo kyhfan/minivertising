@@ -24,6 +24,7 @@
             <strong>Category :</strong> <?=$category_name?>
             · by minivertising
             <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');">            
           </div>
           <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php
@@ -55,3 +56,25 @@
   js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+function fb_share(title,url){
+	FB.ui(
+	  {
+		method: 'feed',
+		name: title,
+		link: url,
+    // picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_topgirl_mini.png',
+		caption: 'http://minivertising.cafe24.com',
+		description: title
+	  },
+	  function(response) {
+		if (response && response.post_id) {
+      alert("완료");
+		} else {
+      alert("실패");
+		}
+	  }
+	);	
+}
+</script>
