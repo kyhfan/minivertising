@@ -7,7 +7,7 @@
 
     <div id="post-list" class="row" style="margin-top:0px">
 <?php
-	query_posts('cat=8');
+	query_posts('cat=4');
 	while (have_posts()) : the_post();
 
 	$categories = get_the_category();
@@ -23,6 +23,7 @@
           <div class="title border-color">
             <strong>Category :</strong> <?=$category_name?>
             · by minivertising
+            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
           </div>
           <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php
@@ -45,3 +46,12 @@
 <?php
 	include_once("_footer.php");
 ?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

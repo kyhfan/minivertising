@@ -9,6 +9,8 @@
 	if($categories){
 		foreach($categories as $category) {
 			$category_name = $category->cat_name;
+			if ($category_name)
+				break;
 		}
 	}
 
