@@ -78,7 +78,7 @@
 			method: 'feed',
 			name: title,
 			link: url,
-		// picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_topgirl_mini.png',
+		// picture:
 			caption: 'http://minivertising.cafe24.com',
 			description: title
 		  },
