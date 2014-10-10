@@ -1511,6 +1511,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	div.project-item .imgdiv img {
 		display:block;
+		width:100%;
 	}
 	div.project-item .imgdiv span { 
 		display:inline-block;
@@ -2529,6 +2530,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 			width:100%;
 			text-align:left;
 			font-size:14px;
+		}
+		.container .fifteensp.columns .four.columns{
+			padding-bottom:20px;
+		}
+		.about_txt_block div.txt{
+			width:100%;
 		}
 		
 	}
