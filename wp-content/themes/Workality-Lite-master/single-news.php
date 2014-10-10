@@ -38,7 +38,7 @@
 <div id="singlecontent">
   <div class="postwraps sixteen columns showajaxcontent border-color">
     <div class="fifteensp columns offset-by-half alpha">
-      <h2 class="titles" style="text-shadow:none!important;"><a href="<?=$post_array[guid]?>" style="text-shadow:none!important;"><?=$post_array[post_title]?></a></h2>
+      <h2 class="titles" style="text-shadow:none!important;"><?=$post_array[post_title]?></h2>
       <hr />
     </div>  
     <div class="fifteensp columns offset-by-half alpha pinfo">
