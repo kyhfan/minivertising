@@ -21,15 +21,20 @@
 	$thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 ?>
 
-        <div class="post-<?=the_ID()?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
-          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
-          <div class="title border-color">
-            <strong>Category :</strong> <?=$category_name?>
-            · by minivertising
-            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
-            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
-			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
+        <div class="post-<?=the_ID()?> clearfix list_news">
+          <div class="text_block">
+	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
+              
+              <div class="title border-color">
+                <?=$category_name?>
+                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
+                <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
+                
+                <p><?=the_excerpt()?></p>
+                <!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
+              </div>
           </div>
+		  <div class="img_block">
             <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php
 	if (has_post_thumbnail())
@@ -37,13 +42,13 @@
             the_post_thumbnail('medium');
 	}else{
 ?>
-            <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
+            <img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
 <?php
 	}
 ?>
           </a>
-          <p><?=the_excerpt()?></p>
-        </div>
+          </div>
+        </div><!--clearfix-->
 <?php
 	endwhile;
 ?>
