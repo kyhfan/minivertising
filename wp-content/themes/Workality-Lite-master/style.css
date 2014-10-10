@@ -512,12 +512,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.about_txt_block div{
 		float:left;
-		width:50%;
+		width:35%;
 	}
 	.about_txt_block div.txt{
 		font-size:14px;
 		letter-spacing:-1px;
+		width:65%;
 	}
+
 
 /* #Tablet (Portrait)
 ================================================== */
@@ -659,38 +661,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
     /* Note: Design for a width of 480px */
 
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-        .container { width: 100%; }
-        .container .columns,
-        .container .column { margin: 0; }
 
-        .container .one.column,
-        .container .one.columns,
-        .container .two.columns,
-        .container .three.columns,
-        .container .four.columns,
-        .container .five.columns,
-        .container .six.columns,
-        .container .seven.columns,
-        .container .eight.columns,
-        .container .nine.columns,
-        .container .ten.columns,
-        .container .eleven.columns,
-        .container .twelve.columns,
-        .container .thirteen.columns,
-        .container .fourteen.columns,
-        .container .fifteen.columns,
-        .container .sixteen.columns,
-        .container .one-third.column,
-        .container .two-thirds.column { width: 420px; }
-		
-		
-		.container .fifteensp.columns { width: 400px; margin:0 10px 0 10px; }
-		.container .fifteensp.columns .four.columns, 
-		.container .fifteensp.columns .twelve.columns, 
-		.container .fifteensp.columns .three.columns { width: 400px; }
-		
-    }
 
 
 /* #Clearing
@@ -2522,7 +2493,45 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 	
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (min-width: 300px) and (max-width: 767px) {
+		.about_txt_block{
+		}
+		.about_txt_block div{
+			float:none;
+			width:100%;
+		}
+		#mobile_menu ul{
+			margin-left:0;
+		}
+		#mobile_menu ul li{
+			float:left;
+			list-style:none;
+			padding-right:15px;
+		}
+		#mobile_menu ul li a{
+			font-size:20px;
+		}
+		#mobile_menu ul .current_page_item a, 
+		#mobile_menu ul .current_menu_item a, 
+		#mobile_menu ul li:hover a {
+		border-bottom: 3px solid;
+		border-color: #000;
+		color: #000;
+		}
+		
+		.contact_info div{
+			float:none;
+			width:100%;
+		}
+		footer .text_1,
+		footer .text_copy{
+			float:none;
+			width:100%;
+			text-align:left;
+			font-size:14px;
+		}
+		
+	}
 
 
 

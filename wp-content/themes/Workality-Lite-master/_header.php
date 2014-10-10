@@ -1,9 +1,9 @@
 <?php
 
 	if ( !isset($wp_did_header) ) {
-    
+
 		$wp_did_header = true;
-    
+
 		require_once( dirname(__FILE__) . '/wp-load.php' );
 
 		wp();
@@ -11,7 +11,11 @@
 		require_once( ABSPATH . WPINC . '/template-loader.php' );
 
 	}
+<<<<<<< HEAD
+*/
+=======
 
+>>>>>>> b5dd237e46cde44d233780c2a48d8f4a43d1562f
 	$my_db = new mysqli("localhost", "root", "root", "minivertising");
 	if (mysqli_connect_error()) {
 		exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
@@ -74,14 +78,12 @@
     <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.0' type='text/css' media='all' />
     <link rel='stylesheet' id='dashicons-css'  href='<?=$home?>/wp-includes/css/dashicons.min.css?ver=4.0' type='text/css' media='all' />
     <link rel='stylesheet' id='admin-bar-css'  href='<?=$home?>/wp-includes/css/admin-bar.min.css?ver=4.0' type='text/css' media='all' />
-    <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/jquery-1.8.2.min.js'></script>
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/modernizr.js?ver=4.0'></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js?ver=4.0'></script>
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/include.js?ver=4.0'></script>
-    <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/minivertising.js'></script>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
     <meta name="generator" content="WordPress 4.0" />
-    <meta property="og:title" content="Workday Sets Price Range for I.P.O." />
     <link rel='canonical' href='<?=$home?>/contact/' />
     <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
@@ -89,93 +91,37 @@
 		html { margin-top: 32px !important; }
 		* html body { margin-top: 32px !important; }
 		@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
 		}
     </style>
+    
   </head>
 
   <body class="page-template-default logged-in admin-bar no-customize-support">
 
     <div class="container">
-<!----------------------------------------------------------------------------------->
-
-      <div id="mobile_menu" style="display:none">
-        <ul>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-
-            <a href="<?=$home?>/about/">ABOUT</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "work") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/work/">WORK</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "news") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/news/">NEWS</a>
-          </li>
-<?php
-	if (strpos($_SERVER['REQUEST_URI'], "contact") !== false)
-	{
-?>
-          <li style="font-weight:bold">
-<?php
-	}else{
-?>
-          <li>
-<?php
-	}
-?>
-            <a href="<?=$home?>/contact/">CONTACT</a>
-          </li>
-        </ul> 
-      </div>
-
-<!----------------------------------------------------------------------------------->
+    
       <div class="header_navi sixteen columns topmargin clearfix">
         <div class="six columns alpha">
+          <a href="#" class="button navbarbutton pull-right"><i class="menu-icon"></i></a>
           <a href="<?=$home?>" class="main-logo" title="drone"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/logo.png" borer="0" /></a>
         </div>
-        <!-- <div class="ten columns omega header-right" style="display:none;">
+        
+        
+        <div class="ten columns omega header-right" style="display:none;">
           <div class="nav-div">
             <form action="<?=$home?>">
               <input type="text" name="s" class="medium" value="">
               <button type="submit"><i class='icon-search'></i></button>
             </form>
           </div>
-        </div> -->
+        </div>
+        
+        
      
         <div class="ten columns omega header-right" style="padding-top:15px;">
-          <ul id="menu-menu1" class="main-nav text-shadow" style="width:231px;height:30px">
+          <ul id="menu-menu1" class="main-nav text-shadow">
 <?php
 	if (strpos($_SERVER['REQUEST_URI'], "about") !== false)
 	{
@@ -239,16 +185,4 @@
         <hr class="headerbottom border-color" />
       </div>
 
-      <div class="header_contact"></div>
-<script type="text/javascript">
-$(window).resize(function(){
-  var b_width = document.body.clientWidth;
-  
-  if (b_width < 768)
-    $("#mobile_menu").show();
-  else
-	$("#mobile_menu").hide();
-
-}).resize();
-
-</script>
+    <div class="header_contact"></div>
