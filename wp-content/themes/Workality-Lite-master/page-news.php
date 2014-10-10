@@ -17,6 +17,8 @@
 			$category_name = $category->cat_name;
 		}
 	}
+
+	$thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 ?>
 
         <div class="post-<?=the_ID()?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
@@ -24,7 +26,7 @@
           <div class="title border-color">
             <strong>Category :</strong> <?=$category_name?>
             · by minivertising
-            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
+            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
             <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
 			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
           </div>
@@ -72,13 +74,13 @@
 
 <script>
 
-	function fb_share(title,url){
+	function fb_share(title,url,thumb_url){
 		FB.ui(
 		  {
 			method: 'feed',
 			name: title,
 			link: url,
-		// picture:
+			picture: thumb_url,
 			caption: 'http://minivertising.cafe24.com',
 			description: title
 		  },
