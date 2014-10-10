@@ -32,6 +32,8 @@
 
 	$client_array = get_post_meta( $post_array[ID], "client");
 ?>
+
+
 <div id="singlecontent">
   <div class="postwraps sixteen columns showajaxcontent border-color">
     <div class="fifteensp columns offset-by-half alpha">
@@ -46,7 +48,7 @@
       <div class="four columns">
         <strong>Client</strong> <br />
         <?=$client_array[0]?>
-      </div>
+      </div>      
       <div class="four columns">
         <strong>Tags</strong> <br />
         <?=the_tags('', ' ', '');?>
@@ -55,25 +57,18 @@
       <hr />
     </div>
     <br class="clear" />
+    <div class="fifteensp columns offset-by-half alpha fitvids">
+      <div class="twelve columns alpha"><p><?=$post_array[post_excerpt]?></p></div>
       <div class="postcontent fitvids">
-        <div class="contentimages columns alpha"><?=$post_array[post_content]?></div>
+        <div class="contentimages fifteen columns alpha"><?=$post_array[post_content]?></div>
         <br class="clear" />
       </div>
-      <!-- <div class="fifteensp columns offset-by-half alpha" style="margin-bottom:10px;">
-        <div class="sharingbottom border-color bottoms"> 
-        <div class="resdontshow shr"><strong>SHARE : </strong></div>
-        <div class="facebook shr"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fworkality-lite.northeme.com%2Fworks%2Fsustainability-report%2F&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe></div><div class="twitter shr"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="http://workality-lite.northeme.com/works/sustainability-report/" data-text="Sustainability Report">Tweet</a></div><div class="googleplus shr"><div class="g-plusone" data-size="medium" data-annotation="none"></div></div><div class="pinterest shr"><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fworkality-lite.northeme.com%2Fworks%2Fsustainability-report%2F&amp;media=http%3A%2F%2Fworkality-lite.northeme.com%2Fwp-content%2Fuploads%2F2012%2F10%2FJYD19-460x350.jpeg&amp;description=Sustainability+Report" class="pin-it-button"><img style="border:none" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></div>					                    &nbsp;
-      </div> -->
-      <!-- <hr class="resshow border-color-works" /> 
-      <div class="navigate pull-right">
-        <span class="pname"></span> 
-        <a href="http://workality-lite.northeme.com" data-title="All" title="All Projects" data-type="works" data-token="35ff6bbe10" class="navigate parent getworks-showmsg gohome">&nbsp;</a>
-        <a href="http://workality-lite.northeme.com/works/impulswerkstatt-newspapers/" data-type="works" data-token="35ff6bbe10" data-id="33" title="Impulswerkstatt Newspapers" class="navigate next getworks-nextback getworks-showmsg">&nbsp;</a>
-      </div> -->
     </div>
     <br class="clear" />
   </div>
 </div> 
+
+
 <?php
 	include_once("_footer.php");
 ?>
