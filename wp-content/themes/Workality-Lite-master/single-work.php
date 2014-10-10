@@ -8,9 +8,12 @@
 	$categories = get_the_category();
 	if($categories){
 		foreach($categories as $category) {
-			$category_name = $category->cat_name;
-			if ($category_name)
-				break;
+			if ($category->cat_name != "0")
+			{
+				$category_name = $category->cat_name;
+				if ($category_name)
+					break;
+			}
 		}
 	}
 
