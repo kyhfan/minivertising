@@ -4,10 +4,10 @@
 ?>
 
     <br class="clear">
-    <div class="row searchpage">
+    <div class="row searchpage sixteen columns">
 <?php if ( have_posts() ) : ?>
         <h1 class="border-color">
-<?php echo '<span>' . single_tag_title( '', false ) . '</span>'; ?>
+<?php echo '<span>' . single_tag_title( '#', false ) . '</span>'; ?>
         </h1>
 <!-- <?php 
 	// GET ITEMS
@@ -17,9 +17,6 @@
 	while (have_posts()) : the_post();
 ?>
         <div class="search-item border-color">
-          <a href="<?= the_guid()?>" class="img" title="">
-            <?php the_post_thumbnail(); ?>
-          </a>
           <h2 class="post-title"><a href="<?= the_guid()?>" title="<?=the_title()?>"><?=the_title()?></a></h2>
           <p><?=the_excerpt()?></p>
         </div>

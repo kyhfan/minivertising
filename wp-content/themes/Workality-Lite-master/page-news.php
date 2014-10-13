@@ -8,9 +8,9 @@
 	add_image_size('custom-size', 480, 200, true );
 ?>
 
-    <div id="post-list" class="row" style="margin-top:0px">
+    <div id="post-list" class="row sixteen columns" style="margin-top:0px">
 <?php
-	query_posts('cat=8');
+	query_posts('cat=7');
 	//query_posts('cat=7');
 	while (have_posts()) : the_post();
 
@@ -29,11 +29,11 @@
 	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
               
               <div class="title border-color">
-                <?=$category_name?>
-                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a>
+                <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a></div>
+    
                 <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div>
                 
-                <p><?=the_excerpt()?></p>
+                <p class="desc_txt"><?=the_excerpt()?></p>
                 <!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
               </div>
           </div>
