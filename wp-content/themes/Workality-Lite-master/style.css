@@ -2468,6 +2468,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		}
 		#mobile_menu ul{
 			margin-left:0;
+			margin-bottom: 0;
 		}
 		#mobile_menu ul li{
 			float:left;
@@ -2510,6 +2511,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.list_news .img_block{
 		float:none;
 		width:100%;
+	}
+	a.main-logo img{
+		width:40%;
 	}
 		
 	}
