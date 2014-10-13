@@ -11,10 +11,7 @@
 		require_once( ABSPATH . WPINC . '/template-loader.php' );
 
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> FETCH_HEAD
 	$my_db = new mysqli("localhost", "root", "root", "minivertising");
 	if (mysqli_connect_error()) {
 		exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
