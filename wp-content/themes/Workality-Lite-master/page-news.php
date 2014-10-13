@@ -27,7 +27,7 @@
               
               <div class="title border-color">
                 <?=$category_name?>
-                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
+                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a>
                 <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
                 
                 <p><?=the_excerpt()?></p>
