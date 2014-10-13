@@ -10,6 +10,7 @@
 	query_posts('cat=7');
 	//query_posts('cat=4');
 	while (have_posts()) : the_post();
+		$client_array = get_post_meta( $post->ID, "client");
 ?>
       <div id="div_post" class="four columns featured project-item" >
         <div class="imgdiv">
@@ -29,6 +30,7 @@
         </div>
         <div class="thumb_large">
           <h5><a href="<?= the_guid()?>" class="getworks" data-type="works" data-id="22" data-token="5b4ac08af1"><?=the_title()?></a></h5>
+          <p><?=$client_array[0]?></p>
           <p><?=the_excerpt()?></p>
         </div>  
       </div>
