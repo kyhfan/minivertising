@@ -528,6 +528,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		letter-spacing:-1px;
 		width:65%;
 	}
+	.cate_txt,
+	.desc_txt{
+		font-size:12px;
+	}
+	.desc_txt{
+		padding-top:20px;
+	}
+	.share_link{
+		text-decoration:underline;
+		font-size:13px;
+		font-weight:bold;
+	}
 
 
 /* #Tablet (Portrait)
