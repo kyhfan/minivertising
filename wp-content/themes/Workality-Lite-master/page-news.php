@@ -7,8 +7,8 @@
 
     <div id="post-list" class="row" style="margin-top:0px">
 <?php
-	//query_posts('cat=8');
-	query_posts('cat=7');
+	query_posts('cat=8');
+	//query_posts('cat=7');
 	while (have_posts()) : the_post();
 
 	$categories = get_the_category();
