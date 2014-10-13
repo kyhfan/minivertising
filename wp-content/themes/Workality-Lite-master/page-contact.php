@@ -33,15 +33,17 @@ $(window).resize(function(){
   var b_width = document.body.clientWidth;
   var b_height = document.body.clientHeight;
   
-  if (b_width >= 960)
+  if (b_width >= 960){
     var b_left = - (b_width - 940) / 2;
-  else if (b_width >= 768)
+  }else if (b_width >= 768){
     var b_left = - (b_width - 748) / 2;
-  else if (b_width >= 420)
+    $("#gmap_div").css("height","300px"); 
+  }else if (b_width >= 420){
     var b_left = - (b_width - 420) / 2;
-  else
+    $("#gmap_div").css("height","300px"); 
+  }else{
     var b_left = - (b_width - 320) / 2;
-
+  }
   if ( b_width <= 768 )
     var b_left = -15;
 
