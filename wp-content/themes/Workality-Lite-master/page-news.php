@@ -13,7 +13,7 @@
 	query_posts('cat=7');
 	//query_posts('cat=7');
 	while (have_posts()) : the_post();
-
+	$category_name = "";
 	$categories = get_the_category();
 	if($categories){
 		foreach($categories as $category) {
@@ -21,8 +21,6 @@
 			if ($category_parent != "0")
 			{
 				$category_name = $category->cat_name;
-			}else{
-				$category_name = "";
 			}
 		}
 	}
