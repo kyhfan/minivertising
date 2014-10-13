@@ -8,7 +8,7 @@
     <div id="post-list" class="row" style="margin-top:0px">
 <?php
 	//query_posts('cat=8');
-	query_posts('cat=4');
+	query_posts('cat=7');
 	while (have_posts()) : the_post();
 
 	$categories = get_the_category();
@@ -17,17 +17,24 @@
 			$category_name = $category->cat_name;
 		}
 	}
+
+	$thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 ?>
 
-        <div class="post-<?=the_ID()?> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized blogpost border-color">
-          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
-          <div class="title border-color">
-            <strong>Category :</strong> <?=$category_name?>
-            · by minivertising
-            <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.PNG"></a>
-            <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
-			<!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
+        <div class="post-<?=the_ID()?> clearfix list_news">
+          <div class="text_block">
+	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
+              
+              <div class="title border-color">
+                <?=$category_name?>
+                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
+                <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
+                
+                <p><?=the_excerpt()?></p>
+                <!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
+              </div>
           </div>
+		  <div class="img_block">
             <a href="<?=the_guid()?>" data-type="blog" data-id="<?=the_ID()?>" data-token="2f67468a67">
 <?php
 	if (has_post_thumbnail())
@@ -35,13 +42,13 @@
             the_post_thumbnail('medium');
 	}else{
 ?>
-            <img width="305" height="230" src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
+            <img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" class="postThumb wp-post-image" alt="<?=the_title()?>" title="<?=the_title()?>" />
 <?php
 	}
 ?>
           </a>
-          <p><?=the_excerpt()?></p>
-        </div>
+          </div>
+        </div><!--clearfix-->
 <?php
 	endwhile;
 ?>
@@ -55,7 +62,7 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '804328482956604',
+      appId      : '769243006468432',
       xfbml      : true,
       version    : 'v2.1'
     });
@@ -72,21 +79,13 @@
 
 <script>
 
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=769243006468432&version=v2.0";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-
-	function fb_share(title,url){
+	function fb_share(title,url,thumb_url){
 		FB.ui(
 		  {
 			method: 'feed',
 			name: title,
 			link: url,
-		// picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_topgirl_mini.png',
+			picture: thumb_url,
 			caption: 'http://minivertising.cafe24.com',
 			description: title
 		  },
@@ -98,9 +97,4 @@
 		);	
 	}
 
-	function fb_like(title, url){
-		//var goUrl = "http://www.facebook.com/plugins/like.php?href=" + encodeURIComponent(url) + "&layout=button_count&action=like&show_faces=true&share=true&height=80&appId=769243006468432";
-		var goUrl = "http://www.facebook.com/plugins/like.php?href=http://minivertising.cafe24.com&layout=button_count&action=like&share=true&height=80&appId=769243006468432";
-		var win = window.open(goUrl, "viewTrace", "resizable=yes, width=660, height=310,status=no,toolbar=no,location=no,scrollbars=no,menubar=no,titlebar=no");
-	}
 </script>
