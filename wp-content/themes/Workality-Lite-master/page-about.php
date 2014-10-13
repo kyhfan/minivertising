@@ -33,7 +33,7 @@
           소비자가 기억하는 것은 즐거움일 것입니다.
           </div>
         </div>
-        <div class="about_txt_block client sixteen columns clearfix">
+        <div class="about_txt_block client sixteen columns clearfix" style="display:none;">
           <div class="left">
           CLIENT
           </div>
