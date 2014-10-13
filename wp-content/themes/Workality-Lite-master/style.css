@@ -540,7 +540,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		font-size:13px;
 		font-weight:bold;
 	}
-
+		.text_block .border-color p{
+			font-size:13px;
+		}
 
 /*  #Mobile (Portrait)
 ================================================== */
