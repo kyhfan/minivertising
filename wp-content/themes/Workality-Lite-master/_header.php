@@ -93,7 +93,7 @@
     </style>
   </head>
 
-  <body class="page-template-default logged-in admin-bar no-customize-support">
+  <body class="page-template-default logged-in admin-bar no-customize-support" style="overflow-x:hidden">
 
     <div class="container">
 
