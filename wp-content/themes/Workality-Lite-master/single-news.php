@@ -12,7 +12,6 @@
 
 	$categories = get_the_category();
 	if($categories){
-		print_r($categories);
 		foreach($categories as $category) {
 			$category_parent = $category->parent;
 			if ($category_parent != "0")
