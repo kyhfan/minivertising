@@ -43,12 +43,12 @@ $(window).resize(function(){
     var b_left = - (b_width - 300) / 2;
 
   if ( b_width <= 768 )
-    var b_left = 0;
+    var b_left = -20;
 
   $("#gmap_div").css("width",b_width); 
   $("#gmap_div").css("left",b_left); 
   $("#gmap_iframe").css("width",b_width);
-  $("#info_div").css("width",b_width);
+  $("#info_div").css("width",b_width-20);
 }).resize();
 </script>
 <?php
