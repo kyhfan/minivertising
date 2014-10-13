@@ -98,7 +98,7 @@
 			name: title,
 			link: url,
 			picture: thumb_url,
-			caption: 'http://minivertising.cafe24.com',
+			caption: 'http://minivertising.kr',
 			description: title
 		  },
 		  function(response) {
