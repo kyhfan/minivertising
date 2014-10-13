@@ -72,7 +72,7 @@ $(window).resize(function(){
   var b_width = document.body.clientWidth;
 
 	if (b_width < 960){
-		$("#video_ifrm").css("height","300px"); 
+		$("#video_ifrm").css("height","260px"); 
 	}
 }).resize();
 </script>
