@@ -12,10 +12,13 @@
 
 	$categories = get_the_category();
 	if($categories){
+		print_r($categories);
 		foreach($categories as $category) {
-			$category_name = $category->cat_name;
-			if ($category_name)
-				break;
+			$category_parent = $category->parent;
+			if ($category_parent != "0")
+			{
+				$category_name = $category->cat_name;
+			}
 		}
 	}
 
