@@ -21,6 +21,8 @@
 			if ($category_parent != "0")
 			{
 				$category_name = $category->cat_name;
+			}else{
+				$category_name = "";
 			}
 		}
 	}
