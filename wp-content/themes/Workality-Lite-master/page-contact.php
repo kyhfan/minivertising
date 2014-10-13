@@ -43,6 +43,7 @@ $(window).resize(function(){
     $("#gmap_div").css("height","300px"); 
   }else{
     var b_left = - (b_width - 320) / 2;
+    $("#gmap_div").css("height","300px"); 
   }
   if ( b_width <= 768 )
     var b_left = -15;
