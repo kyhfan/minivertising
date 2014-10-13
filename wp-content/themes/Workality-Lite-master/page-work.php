@@ -7,8 +7,8 @@
     <div id="post-list" class="row" style="margin-top:0px">
 
 <?php
-	// query_posts('cat=7');
-	query_posts('cat=4');
+	query_posts('cat=7');
+	//query_posts('cat=4');
 	while (have_posts()) : the_post();
 ?>
       <div id="div_post" class="four columns featured project-item" >

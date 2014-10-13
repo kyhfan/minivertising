@@ -8,11 +8,10 @@
 	$categories = get_the_category();
 	if($categories){
 		foreach($categories as $category) {
-			if ($category->cat_name != "0")
+			$category_parent = $category->parent;
+			if ($category_parent != "0")
 			{
 				$category_name = $category->cat_name;
-				if ($category_name)
-					break;
 			}
 		}
 	}
