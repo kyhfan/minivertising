@@ -38,17 +38,17 @@ $(window).resize(function(){
   else if (b_width >= 768)
     var b_left = - (b_width - 748) / 2;
   else if (b_width >= 420)
-    var b_left = - (b_width - 400) / 2;
+    var b_left = - (b_width - 420) / 2;
   else
-    var b_left = - (b_width - 300) / 2;
+    var b_left = - (b_width - 320) / 2;
 
   if ( b_width <= 768 )
-    var b_left = -20;
+    var b_left = -15;
 
   $("#gmap_div").css("width",b_width); 
   $("#gmap_div").css("left",b_left); 
   $("#gmap_iframe").css("width",b_width);
-  $("#info_div").css("width",b_width-20);
+  $("#info_div").css("width",(b_width-20)/2);
 }).resize();
 </script>
 <?php
