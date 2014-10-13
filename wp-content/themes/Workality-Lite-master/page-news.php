@@ -30,8 +30,8 @@
               
               <div class="title border-color">
                 <?=$category_name?>
-                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');"><img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/share.png"></a>
-                <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden"></div>
+                <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a>
+                <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div>
                 
                 <p><?=the_excerpt()?></p>
                 <!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->

@@ -39,7 +39,7 @@
     <title>MINIVERTISING</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="drone.tv" />
+    <meta name="author" content="" />
     <!-- Mobile Specific Metas
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -80,8 +80,8 @@
     <script type='text/javascript' src='<?=$home?>/wp-content/themes/Workality-Lite-master/js/minivertising.js'></script>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=$home?>/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=$home?>/wp-includes/wlwmanifest.xml" /> 
-    <meta name="generator" content="WordPress 4.0" />
-    <meta property="og:title" content="Workday Sets Price Range for I.P.O." />
+    <meta name="generator" content="MINIVERTISING" />
+    <meta property="og:title" content="MINIVERTISING" />
     <link rel='canonical' href='<?=$home?>/contact/' />
     <link rel='shortlink' href='<?=$home?>/contact/' />
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
