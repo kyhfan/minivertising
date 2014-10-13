@@ -11,7 +11,7 @@
     <iframe id="gmap_iframe" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12663.916420177322!2d126.9908032!3d37.484819449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1aec441647d%3A0x11a67fdb6ad9321f!2z7ISc7Jq47Yq567OE7IucIOyEnOy0iOq1rCDrsKnrsLDrj5kgOTMxLTk!5e0!3m2!1sko!2skr!4v1411555243887" height="300" frameborder="0"></iframe>
   </div>
             <?php endwhile; ?> -->
-          <div style="padding-bottom:50px;" class="contact_info clearfix">
+          <div style="padding-bottom:50px;" id="info_div" class="contact_info clearfix">
           	<div class="left">
 	            <p style="font-weight:bold;">MINIVERTISING Corp.</p>
                 <p>OFFICE.&nbsp;&nbsp;2F 931-9, Bangbae-dong, Seocho-gu Seoul</p>
@@ -48,6 +48,7 @@ $(window).resize(function(){
   $("#gmap_div").css("width",b_width); 
   $("#gmap_div").css("left",b_left); 
   $("#gmap_iframe").css("width",b_width);
+  $("#info_div").css("width",b_width);
 }).resize();
 </script>
 <?php
