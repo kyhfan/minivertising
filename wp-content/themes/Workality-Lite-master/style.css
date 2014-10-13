@@ -458,11 +458,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 	/* MINIVERTISING */
+	.main_page{
+		padding:20px; 
+		background:#262626; 
+		color:#fff; padding-top:200px; 
+		width:900px !important; font-size:25px;
+	}
 	.header_navi{
 		margin-bottom:35px;
 	}
 	.list_news{
-		width:100%;
+		width:940px;
 		padding-bottom:20px;
 		border-bottom:1px solid #ccc;
 		margin-bottom:25px;
@@ -494,7 +500,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		float:left;
 	}
 	.contact_info{
-		width:100%;
+		width:940px;
 	}
 	.contact_info div{
 		width:50%;
@@ -508,7 +514,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.about_txt_block {
 		padding-top:20px;
-		width:100%;
+		width:940px;
 	}
 	.about_txt_block.client{
 		padding-top:40px;
@@ -2498,7 +2504,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (min-width: 300px) and (max-width: 767px) {
+		.main_page{
+			width:90% !important;
+			padding:5%;
+			padding-top:20%;
+		}
 		.about_txt_block{
+			width:100%;
 		}
 		.about_txt_block div{
 			float:none;

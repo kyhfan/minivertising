@@ -7,7 +7,7 @@
         <div class="sixteen columns">
           <img src="http://minivertising.cafe24.com/wp-content/themes/Workality-Lite-master/images/ex_about.jpg" />
         </div>
-        <div class="about_txt_block clearfix">
+        <div class="about_txt_block sixteen columns clearfix">
           <div class="left">
           WHY MINIVERTISING?
 
@@ -21,7 +21,7 @@
           만들기 위해 탄생했습니다.
           </div>
         </div>
-        <div class="about_txt_block clearfix">
+        <div class="about_txt_block sixteen columns clearfix">
           <div class="left">
           -
           </div>
@@ -33,7 +33,7 @@
           소비자가 기억하는 것은 즐거움일 것입니다.
           </div>
         </div>
-        <div class="about_txt_block client clearfix">
+        <div class="about_txt_block client sixteen columns clearfix">
           <div class="left">
           CLIENT
           </div>
