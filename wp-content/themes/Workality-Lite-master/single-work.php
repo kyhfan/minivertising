@@ -41,7 +41,7 @@
 
 
 <div id="singlecontent">
-  <div class="columns navibg border-color">
+  <div class="columns navibg border-color" id="navi_div">
     <div class="four columns alpha">
       <h3>WORK</h3>
     </div>
@@ -111,6 +111,7 @@ $(window).resize(function(){
 
 	if (b_width < 960){
 		$("#video_ifrm").css("height","260px"); 
+		$("#navi_div").hide(); 
 	}
 }).resize();
 

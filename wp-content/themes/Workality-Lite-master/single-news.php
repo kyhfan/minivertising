@@ -44,7 +44,7 @@
 	$next_post_array = transObject($next_post);
 ?>
 <div id="singlecontent">
-  <div class="columns navibg border-color">
+  <div class="columns navibg border-color" id="navi_div">
     <div class="four columns alpha">
       <h3>NEWS</h3>
     </div>
@@ -104,6 +104,13 @@
   </div>
 </div>
 <script type="text/javascript">
+
+$(window).resize(function(){
+	if (b_width < 960){
+		$("#navi_div").hide(); 
+	}
+}).resize();
+
 function show_title(title)
 {
 	$(".pname").html(title);
