@@ -33,7 +33,7 @@
 	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
               
               <div class="title border-color">
-                <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a></div>
+                <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>','<?=the_excerpt()?>');" class="share_link">SHARE</a></div>
     
                 <!-- <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div> -->
                 
@@ -90,7 +90,7 @@
 
 <script>
 
-	function fb_share(title,url,thumb_url){
+	function fb_share(title,url,thumb_url,excerpt){
 		FB.ui(
 		  {
 			method: 'feed',
@@ -98,7 +98,7 @@
 			link: url,
 			picture: thumb_url,
 			caption: 'http://minivertising.kr',
-			description: title
+			description: excerpt
 		  },
 		  function(response) {
 			if (response && response.post_id) {
