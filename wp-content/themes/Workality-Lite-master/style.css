@@ -488,7 +488,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		width:100%;
 	}
 	h2.titles{
-		font-size:15px;
+		font-size:17px;
 		padding-top:15px;
 	}
 	.work_post_block{
@@ -1908,7 +1908,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.postcontent div.contentimages, .postcontent div.contentvideos {   
 		padding-top:30px;
-		padding-bottom:30px;
+		padding-bottom:60px;
 	}
 	div.postwraps { 
 		background-color:#fff; 
