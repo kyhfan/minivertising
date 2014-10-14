@@ -35,7 +35,7 @@
               <div class="title border-color">
                 <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>');" class="share_link">SHARE</a></div>
     
-                <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div>
+                <!-- <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div> -->
                 
                 <p class="desc_txt"><?=the_excerpt()?></p>
                 <!-- <input type="button" value="공유하기" onclick="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>');"> -->
