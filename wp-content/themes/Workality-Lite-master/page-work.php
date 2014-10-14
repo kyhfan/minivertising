@@ -2,7 +2,7 @@
 	include_once("_header.php");
 	
 	// thumbnail 크기 설정
-	set_post_thumbnail_size( 220, 166 );
+	set_post_thumbnail_size( 220, 160 );
 ?>
     <div id="post-list" class="row" style="margin-top:0px">
 
