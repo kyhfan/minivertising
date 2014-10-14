@@ -106,6 +106,7 @@
 <script type="text/javascript">
 
 $(window).resize(function(){
+	var b_width = document.body.clientWidth;
 	if (b_width < 960){
 		$("#navi_div").hide(); 
 	}
