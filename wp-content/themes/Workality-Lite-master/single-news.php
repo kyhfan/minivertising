@@ -88,7 +88,7 @@
       </div> 
       <div class="four columns">
         <strong>Tags</strong> <br />
-        <?=the_tags('', ' ', '');?>
+        <?=the_tags('#', ', #', '');?>
       </div>
       <br class="clear" />
       <hr />

@@ -30,10 +30,48 @@
 	//print_r($post_array);
 
 	$client_array = get_post_meta( $post_array[ID], "client");
+
+	$prev_post = get_previous_post(true);
+	$next_post = get_next_post(true);
+	
+	$prev_post_array = transObject($prev_post);
+	$next_post_array = transObject($next_post);
+
 ?>
 
 
 <div id="singlecontent">
+  <div class="columns navibg border-color">
+    <div class="four columns alpha">
+      <h3>WORK</h3>
+    </div>
+    <div class="twelve columns omega">
+      <div class="navigate">
+        <hr class="resshow border-color" /> 
+        <span class="pname"></span>
+<?
+	if (!$next_post)
+	{
+?>
+        <a href="http://minivertising.kr/news/" data-title="news" title="news" data-type="news" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL NEWS')" onmouseout="show_title('')">&nbsp;</a>
+<?
+	}else{
+?>
+        <a href="http://minivertising.kr/news/" data-title="news" title="news" data-type="news" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL NEWS')" onmouseout="show_title('')">&nbsp;</a>
+        <a href="<?=$next_post_array[guid]?>" data-id="<?=$next_post_array[ID]?>" title="<?=$next_post_array[post_title]?>" class="navigate back getworks-nextback getworks-showmsg" onmouseover="show_title('<?=$next_post_array[post_title]?>')" onmouseout="show_title('')">&nbsp;</a>
+<?
+	}
+	
+	if ($prev_post)
+	{
+?>
+        <a href="<?=$prev_post_array[guid]?>" data-id="<?=$prev_post_array[ID]?>" title="<?=$prev_post_array[post_title]?>" class="navigate next getworks-nextback getworks-showmsg" onmouseover="show_title('<?=$prev_post_array[post_title]?>')" onmouseout="show_title('')">&nbsp;</a>
+<?
+	}
+?>
+      </div>
+    </div>
+  </div>
   <div class="postwraps sixteen columns showajaxcontent border-color">
     <div class="fifteensp columns offset-by-half alpha">
       <h2 class="titles" style="text-shadow:none!important;"><?=$post_array[post_title]?></h2>
@@ -50,7 +88,7 @@
       </div>      
       <div class="four columns">
         <strong>Tags</strong> <br />
-        <?=the_tags('', ' ', '');?>
+        <?=the_tags('#', ', #', '');?>
       </div>
       <br class="clear" />
       <hr />
