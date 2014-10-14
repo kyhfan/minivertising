@@ -111,6 +111,7 @@ $(window).resize(function(){
 
 	if (b_width < 960){
 		$("#video_ifrm").css("height","260px"); 
+		$("#video_ifrm").css("width",$("#singlecontent").width()); 
 		$("#navi_div").hide(); 
 	}
 }).resize();
