@@ -460,6 +460,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	/* MINIVERTISING */
 	.main_page{
 		padding:20px; 
+		margin-bottom:20px;
 		background:#262626; 
 		color:#fff; padding-top:200px; 
 		width:900px !important; font-size:25px;
