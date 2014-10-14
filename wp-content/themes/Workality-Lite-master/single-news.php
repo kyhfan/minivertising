@@ -46,7 +46,7 @@
 <div id="singlecontent">
   <div class="columns navibg border-color">
     <div class="four columns alpha">
-      <h3></h3>
+      <h3>NEWS</h3>
     </div>
     <div class="twelve columns omega">
       <div class="navigate">
