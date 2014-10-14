@@ -113,6 +113,12 @@ $(window).resize(function(){
 		$("#video_ifrm").css("height","260px"); 
 	}
 }).resize();
+
+function show_title(title)
+{
+	$(".pname").html(title);
+}
+
 </script>
 
 <?php
