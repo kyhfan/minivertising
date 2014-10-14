@@ -2,13 +2,15 @@
 	include_once("_header.php");
 	
 	// thumbnail 크기 설정
-	set_post_thumbnail_size( 220, 160 );
+	//add_theme_support( 'post-thumbnails' );
+	//set_post_thumbnail_size( 220, 160, true );
+	add_image_size('custom-size', 220, 160, true );
 ?>
     <div id="post-list" class="row" style="margin-top:0px">
 
 <?php
+	//query_posts('cat=8');
 	query_posts('cat=4');
-	//query_posts('cat=4');
 	while (have_posts()) : the_post();
 		$client_array = get_post_meta( $post->ID, "client");
 ?>
@@ -19,7 +21,7 @@
 <?php
 	if (has_post_thumbnail())
 	{
-		the_post_thumbnail();
+		the_post_thumbnail('custom-size');
 	}else{
 ?>
             <img src="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.jpg" data-small="<?=$home?>wp-content/themes/Workality-Lite-master/images/no-image.png-150x113.jpg" data-large="<?=$home?>/wp-content/themes/Workality-Lite-master/images/no-image.png-300x226.jpg" title="<?=the_title()?>" alt="<?=the_title()?>" />
@@ -40,16 +42,17 @@
       <br class="clear rowseperator">
     </div>  
 <script type="text/javascript">
+/*
 $(window).resize(function(){
 	var b_width = $("#div_post").width();
 
 	if (b_width == 220)
-		<? set_post_thumbnail_size( 220, 166 );?>;
+		<? set_post_thumbnail_size( 220, 160, true );?>;
 	else
-		<? set_post_thumbnail_size( 172, 130 );?>;
+		<? set_post_thumbnail_size( 172, 130, true );?>;
 
 }).resize();
-
+*/
 </script>
 
 <?php
