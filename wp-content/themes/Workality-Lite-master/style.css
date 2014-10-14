@@ -408,7 +408,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
-    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .container .columns                         { float: left; margin-left: 10px; margin-right: 10px; }
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
@@ -547,6 +547,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		.text_block .border-color p{
 			font-size:13px;
 		}
+	.container #div_post.four.columns{
+		height:260px;
+	}
 
 /*  #Mobile (Portrait)
 ================================================== */
