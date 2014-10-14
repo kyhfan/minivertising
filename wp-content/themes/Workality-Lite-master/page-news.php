@@ -26,6 +26,7 @@
 	}
 
 	$thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+	$post_excerpt = get_the_excerpt();
 ?>
 
         <div class="post-<?=the_ID()?> clearfix list_news">
@@ -33,7 +34,7 @@
 	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
               
               <div class="title border-color">
-                <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>','<?=the_excerpt()?>');" class="share_link">SHARE</a></div>
+                <div class="cate_txt"><?=$category_name?> / <a href="javascript:fb_share('<?=the_title()?>','<?= the_guid()?>','<?=$thumb_url?>','<?=$post_excerpt?>');" class="share_link">SHARE</a></div>
     
                 <!-- <div class="fb-like" data-href="<?= the_guid()?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="overflow:hidden; display:none;"></div> -->
                 
