@@ -53,11 +53,11 @@
 	if (!$next_post)
 	{
 ?>
-        <a href="http://minivertising.kr/news/" data-title="news" title="news" data-type="news" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL NEWS')" onmouseout="show_title('')">&nbsp;</a>
+        <a href="http://minivertising.kr/work/" data-title="work" title="work" data-type="work" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL WORK')" onmouseout="show_title('')">&nbsp;</a>
 <?
 	}else{
 ?>
-        <a href="http://minivertising.kr/news/" data-title="news" title="news" data-type="news" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL NEWS')" onmouseout="show_title('')">&nbsp;</a>
+        <a href="http://minivertising.kr/work/" data-title="work" title="work" data-type="work" class="navigate parent getworks-showmsg gohome" onmouseover="show_title('ALL WORK')" onmouseout="show_title('')">&nbsp;</a>
         <a href="<?=$next_post_array[guid]?>" data-id="<?=$next_post_array[ID]?>" title="<?=$next_post_array[post_title]?>" class="navigate back getworks-nextback getworks-showmsg" onmouseover="show_title('<?=$next_post_array[post_title]?>')" onmouseout="show_title('')">&nbsp;</a>
 <?
 	}
