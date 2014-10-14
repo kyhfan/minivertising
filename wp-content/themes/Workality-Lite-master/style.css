@@ -470,7 +470,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.list_news{
 		width:940px;
 		padding-bottom:25px;
-		border-bottom:1px solid #ccc;
 		margin-bottom:25px;
 	}
 	.list_news .text_block{
@@ -530,6 +529,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 	.cate_txt,
 	.desc_txt{
+		font-size:12px;
+	}
+	.cate_txt a{
+		color:#000;
 		font-size:12px;
 	}
 	.desc_txt{
