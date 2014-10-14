@@ -67,6 +67,15 @@
   </div>
 </div> 
 
+<script type="text/javascript">
+$(window).resize(function(){
+  var b_width = document.body.clientWidth;
+
+	if (b_width < 960){
+		$("#video_ifrm").css("height","260px"); 
+	}
+}).resize();
+</script>
 
 <?php
 	include_once("_footer.php");
