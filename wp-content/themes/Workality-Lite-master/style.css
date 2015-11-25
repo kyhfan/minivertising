@@ -548,7 +548,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 			font-size:13px;
 		}
 	.container #div_post.four.columns{
-		/*height:260px;*/
+		height:260px;
+	}
+
+	.container #div_post.four.columns.m_work{
+		height:260px;
 	}
 
 /*  #Mobile (Portrait)
