@@ -59,6 +59,8 @@ $(document).ready(function(){
 	if (body_width > 960 )
 	{
 		$(".columns ").css("height","260px");
+	}else{
+		$(".columns ").css("height","");
 	}
 });
 
@@ -67,6 +69,8 @@ $(window).resize(function(){
 	if (body_width > 960 )
 	{
 		$(".columns ").css("height","260px");
+	}else{
+		$(".columns ").css("height","");
 	}
 }).resize();
 
