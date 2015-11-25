@@ -53,13 +53,23 @@ $(window).resize(function(){
 
 }).resize();
 */
+var body_width = 0;
 $(document).ready(function(){
-	var body_width	= $("body").width();
+	body_width	= $("body").width();
 	if (body_width > 960 )
 	{
 		$(".columns ").css("height","260px");
 	}
 });
+
+$(window).resize(function(){
+	body_width	= $("body").width();
+	if (body_width > 960 )
+	{
+		$(".columns ").css("height","260px");
+	}
+}).resize();
+
 </script>
 
 <?php
