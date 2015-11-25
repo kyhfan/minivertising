@@ -14,7 +14,7 @@
 	while (have_posts()) : the_post();
 		$client_array = get_post_meta( $post->ID, "client");
 ?>
-      <div id="div_post" class="four columns featured project-item clearfix" >
+      <div id="div_post" class="four columns featured project-item post_test clearfix" >
         <div class="imgdiv">
           <a href="<?= the_guid()?>" class="getworks" data-type="works" data-id="22" data-token="5b4ac08af1">
             <span></span>
@@ -58,9 +58,9 @@ $(document).ready(function(){
 	body_width	= $("body").width();
 	if (body_width > 960 )
 	{
-		$(".columns ").css("height","260px");
+		$(".post_test ").css("height","260px");
 	}else{
-		$(".columns ").css("height","");
+		$(".post_test ").css("height","");
 	}
 });
 
@@ -68,9 +68,9 @@ $(window).resize(function(){
 	body_width	= $("body").width();
 	if (body_width > 960 )
 	{
-		$(".columns ").css("height","260px");
+		$(".post_test ").css("height","260px");
 	}else{
-		$(".columns ").css("height","");
+		$(".post_test ").css("height","");
 	}
 }).resize();
 
