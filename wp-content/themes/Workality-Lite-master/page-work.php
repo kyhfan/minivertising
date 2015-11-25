@@ -57,7 +57,7 @@ $(document).ready(function(){
 	var body_width	= $("body").width();
 	if (body_width > 960 )
 	{
-		$("#div_post").css("height","260px");
+		$(".columns ").css("height","260px");
 	}
 });
 </script>
