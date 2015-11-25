@@ -551,8 +551,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		height:260px;
 	}
 
-	.container #div_post.four.columns.m_work{
-		height:260px;
+	.container #div_post.four.columns2{
+		/*height:260px;*/
 	}
 
 /*  #Mobile (Portrait)
@@ -2532,6 +2532,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.container #div_post.four.columns{
 		width:50%;
 	}
+	.container #div_post.four.columns2{
+		width:50%;
+	}
 	.container .column{
 	width:50%;
 	float: left;
@@ -2540,6 +2543,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	margin-right: 10px;
 	}
 	.container #div_post.four.columns .imgdiv{
+		width:95%;
+	}
+	.container #div_post.four.columns2 .imgdiv{
 		width:95%;
 	}
 	

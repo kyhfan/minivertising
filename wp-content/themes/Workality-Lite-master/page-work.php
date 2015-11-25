@@ -14,7 +14,7 @@
 	while (have_posts()) : the_post();
 		$client_array = get_post_meta( $post->ID, "client");
 ?>
-      <div id="div_post" class="four columns featured project-item m_work clearfix" >
+      <div id="div_post" class="four columns2 featured project-item clearfix" >
         <div class="imgdiv">
           <a href="<?= the_guid()?>" class="getworks" data-type="works" data-id="22" data-token="5b4ac08af1">
             <span></span>
