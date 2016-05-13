@@ -1,5 +1,6 @@
 <?php
 	include_once("_header.php");
+	echo "<script>location.href='".$home."/news/';</script>"
 ?>
     <div id="post-list" style="margin-top:0px">
       <br class="clear" />
