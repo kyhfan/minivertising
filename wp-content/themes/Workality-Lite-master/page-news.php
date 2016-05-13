@@ -30,7 +30,7 @@
 ?>
 
         <div class="post-<?=the_ID()?> clearfix list_news">
-          <div class="text_block">
+          <div class="text_block">11
 	          <h3><a href="<?= the_guid()?>" data-type="blog" data-id="<?= the_ID()?>" data-token="2f67468a67"><?=the_title()?></a></h3>
               
               <div class="title border-color">
