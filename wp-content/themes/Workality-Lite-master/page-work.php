@@ -33,7 +33,7 @@
         <div class="thumb_large">
           <h5><a href="<?= the_guid()?>" class="getworks" data-type="works" data-id="22" data-token="5b4ac08af1"><?=the_title()?></a></h5>
           <p><?=$client_array[0]?></p>
-          <p><?=the_excerpt()?></p>
+          <!-- <p><?=the_excerpt()?></p> -->
         </div>  
       </div>
 <?php
