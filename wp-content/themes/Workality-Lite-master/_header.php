@@ -37,7 +37,8 @@
   ================================================== -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>MINIVERTISING</title>
-    <meta name="description" content="">
+    <meta name="description" content="작지만 큰 아이디어. 본질을 추구합니다. 디지털광고대행사 미니버타이">
+    <meta name="title" content="미니버타이징">
     <meta name="keywords" content="">
     <meta name="author" content="" />
 	<meta name="naver-site-verification" content="77b703e838cfe1bd973071c4044be01c76eacc0c"/>
