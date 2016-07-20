@@ -40,6 +40,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="" />
+	<meta name="naver-site-verification" content="77b703e838cfe1bd973071c4044be01c76eacc0c"/>
     <!-- Mobile Specific Metas
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
