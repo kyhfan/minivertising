@@ -9,7 +9,7 @@
         </div>
         <div class="about_txt_block sixteen columns clearfix">
           <div class="left">
-          WHY MINIVERTISING?11
+          WHY MINIVERTISING?
 
           </div>
           <div class="right txt">
